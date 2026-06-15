@@ -1,0 +1,375 @@
+{
+  "version": 3,
+  "skills": {
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/remotion-dev/skills.git",
+      "skillPath": "skills/remotion/SKILL.md",
+      "skillFolderHash": "666980630dc910c6b623f3bab13280af47d6995e",
+      "installedAt": "2026-03-16T06:35:25.925Z",
+      "updatedAt": "2026-03-16T07:16:06.305Z"
+    },
+    "api-patterns": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/api-patterns/SKILL.md",
+      "skillFolderHash": "ad74c663a3ab03be61e69669624bf15aa2bee6f9",
+      "installedAt": "2026-03-16T06:35:45.639Z",
+      "updatedAt": "2026-03-16T06:35:45.639Z"
+    },
+    "app-builder": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/app-builder/SKILL.md",
+      "skillFolderHash": "5b6d60a3ba8a648cb8087e9c7d320b35add49977",
+      "installedAt": "2026-03-16T06:35:45.680Z",
+      "updatedAt": "2026-03-16T06:35:45.680Z"
+    },
+    "architecture": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/architecture/SKILL.md",
+      "skillFolderHash": "ccca9d3e42e28b76a1c56f70ba77fc417f2f5546",
+      "installedAt": "2026-03-16T06:35:45.720Z",
+      "updatedAt": "2026-03-16T06:35:45.720Z"
+    },
+    "bash-linux": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/bash-linux/SKILL.md",
+      "skillFolderHash": "0ab9bfffcff6a069da7aa5593b4c4e96c9b6a500",
+      "installedAt": "2026-03-16T06:35:45.762Z",
+      "updatedAt": "2026-03-16T06:35:45.762Z"
+    },
+    "behavioral-modes": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/behavioral-modes/SKILL.md",
+      "skillFolderHash": "99f6b582ac00b153640fcc4bf0ff3927d17725f5",
+      "installedAt": "2026-03-16T06:35:45.803Z",
+      "updatedAt": "2026-03-16T06:35:45.803Z"
+    },
+    "brainstorming": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/brainstorming/SKILL.md",
+      "skillFolderHash": "41d38f8cc26672aa9b2447f1e41279fbebfd8dee",
+      "installedAt": "2026-03-16T06:35:45.842Z",
+      "updatedAt": "2026-03-16T06:35:45.842Z"
+    },
+    "clean-code": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/clean-code/SKILL.md",
+      "skillFolderHash": "570997421871bd2ab1d70a6564992775856afbfa",
+      "installedAt": "2026-03-16T06:35:45.882Z",
+      "updatedAt": "2026-03-16T06:35:45.882Z"
+    },
+    "code-review-checklist": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/code-review-checklist/SKILL.md",
+      "skillFolderHash": "59edad59c4172e9e3d5789de9bdc4a5af8bc6448",
+      "installedAt": "2026-03-16T06:35:45.923Z",
+      "updatedAt": "2026-03-16T06:35:45.923Z"
+    },
+    "database-design": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/database-design/SKILL.md",
+      "skillFolderHash": "ecb222cd479a92c2e95708a24f2b3f08ca2fa876",
+      "installedAt": "2026-03-16T06:35:45.962Z",
+      "updatedAt": "2026-03-16T06:35:45.962Z"
+    },
+    "deployment-procedures": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/deployment-procedures/SKILL.md",
+      "skillFolderHash": "cf467cc81d41f7c448facc6d624e4a7760ed88e6",
+      "installedAt": "2026-03-16T06:35:46.004Z",
+      "updatedAt": "2026-03-16T06:35:46.004Z"
+    },
+    "documentation-templates": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/documentation-templates/SKILL.md",
+      "skillFolderHash": "f29194c01eec7d85644966d0aea66bab1fedfaf0",
+      "installedAt": "2026-03-16T06:35:46.044Z",
+      "updatedAt": "2026-03-16T06:35:46.044Z"
+    },
+    "frontend-design": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/frontend-design/SKILL.md",
+      "skillFolderHash": "7ad4211e383d1d230e4921fe0f2c9a295993c8cd",
+      "installedAt": "2026-03-16T06:35:46.084Z",
+      "updatedAt": "2026-03-16T06:35:46.084Z"
+    },
+    "game-development": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/game-development/SKILL.md",
+      "skillFolderHash": "ff64efeb2b6a72dc903b541c9ceedba28dcb3936",
+      "installedAt": "2026-03-16T06:35:46.124Z",
+      "updatedAt": "2026-03-16T06:35:46.124Z"
+    },
+    "geo-fundamentals": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/geo-fundamentals/SKILL.md",
+      "skillFolderHash": "7a95180c150ce12d0cd63e1d385ffb0f38ae2611",
+      "installedAt": "2026-03-16T06:35:46.167Z",
+      "updatedAt": "2026-03-16T06:35:46.167Z"
+    },
+    "i18n-localization": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/i18n-localization/SKILL.md",
+      "skillFolderHash": "40629c96c19c3b809019860b3be21f45ace32f2e",
+      "installedAt": "2026-03-16T06:35:46.208Z",
+      "updatedAt": "2026-03-16T06:35:46.208Z"
+    },
+    "intelligent-routing": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/intelligent-routing/SKILL.md",
+      "skillFolderHash": "6f073c8c25bfd8e6f26a8c47606f75e7835ac43b",
+      "installedAt": "2026-03-16T06:35:46.248Z",
+      "updatedAt": "2026-03-16T06:35:46.248Z"
+    },
+    "mcp-builder": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/mcp-builder/SKILL.md",
+      "skillFolderHash": "435085c05ebea1e7f3b56ba2e04f44abcb8373e9",
+      "installedAt": "2026-03-16T06:35:46.288Z",
+      "updatedAt": "2026-03-16T06:35:46.288Z"
+    },
+    "mobile-design": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/mobile-design/SKILL.md",
+      "skillFolderHash": "16db6e24eac9b5a729b47488362fbb6406e21109",
+      "installedAt": "2026-03-16T06:35:46.328Z",
+      "updatedAt": "2026-03-16T06:35:46.328Z"
+    },
+    "react-best-practices": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/nextjs-react-expert/SKILL.md",
+      "skillFolderHash": "a7b97db318874415ca24b2993177651f7194bdd9",
+      "installedAt": "2026-03-16T06:35:46.371Z",
+      "updatedAt": "2026-03-16T06:35:46.371Z"
+    },
+    "nodejs-best-practices": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/nodejs-best-practices/SKILL.md",
+      "skillFolderHash": "3a899047a6339532769e1ff4534aeb2c1d5c61b1",
+      "installedAt": "2026-03-16T06:35:46.413Z",
+      "updatedAt": "2026-03-16T06:35:46.413Z"
+    },
+    "parallel-agents": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/parallel-agents/SKILL.md",
+      "skillFolderHash": "cb77846ee47fee44366b9432d3291ad5ce357d9a",
+      "installedAt": "2026-03-16T06:35:46.453Z",
+      "updatedAt": "2026-03-16T06:35:46.453Z"
+    },
+    "performance-profiling": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/performance-profiling/SKILL.md",
+      "skillFolderHash": "848488371856cdb3d008b28e754be7fcb1cd462d",
+      "installedAt": "2026-03-16T06:35:46.494Z",
+      "updatedAt": "2026-03-16T06:35:46.494Z"
+    },
+    "plan-writing": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/plan-writing/SKILL.md",
+      "skillFolderHash": "61675e5e7acc35570cf2d0001e85d728d67dcef2",
+      "installedAt": "2026-03-16T06:35:46.534Z",
+      "updatedAt": "2026-03-16T06:35:46.534Z"
+    },
+    "powershell-windows": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/powershell-windows/SKILL.md",
+      "skillFolderHash": "5c6afe68a8293befb8c2729e9759d51665320989",
+      "installedAt": "2026-03-16T06:35:46.581Z",
+      "updatedAt": "2026-03-16T06:35:46.581Z"
+    },
+    "python-patterns": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/python-patterns/SKILL.md",
+      "skillFolderHash": "7fd4f712c3fa02951da9362ed78fb2ca60ace7a3",
+      "installedAt": "2026-03-16T06:35:46.622Z",
+      "updatedAt": "2026-03-16T06:35:46.622Z"
+    },
+    "red-team-tactics": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/red-team-tactics/SKILL.md",
+      "skillFolderHash": "242ac16f35cc01dda4167e770f4ad93fdf5de259",
+      "installedAt": "2026-03-16T06:35:46.661Z",
+      "updatedAt": "2026-03-16T06:35:46.661Z"
+    },
+    "rust-pro": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/rust-pro/SKILL.md",
+      "skillFolderHash": "7f46dd3b1785ac444c46040175d862cff427fa22",
+      "installedAt": "2026-03-16T06:35:46.699Z",
+      "updatedAt": "2026-03-16T06:35:46.699Z"
+    },
+    "seo-fundamentals": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/seo-fundamentals/SKILL.md",
+      "skillFolderHash": "30ad18645bd24934219a68b7e84fa7a1474a62c0",
+      "installedAt": "2026-03-16T06:35:46.742Z",
+      "updatedAt": "2026-03-16T06:35:46.742Z"
+    },
+    "server-management": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/server-management/SKILL.md",
+      "skillFolderHash": "1f3df77f3da9243b03bec4c338c9338e470424e2",
+      "installedAt": "2026-03-16T06:35:46.781Z",
+      "updatedAt": "2026-03-16T06:35:46.781Z"
+    },
+    "systematic-debugging": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/systematic-debugging/SKILL.md",
+      "skillFolderHash": "6502a8b1f211e254a6ad270182bcf0aaf3d44ca0",
+      "installedAt": "2026-03-16T06:35:46.819Z",
+      "updatedAt": "2026-03-16T06:35:46.819Z"
+    },
+    "tailwind-patterns": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/tailwind-patterns/SKILL.md",
+      "skillFolderHash": "1883327770cc05d9a94fc50a64f3299ddb45e9c2",
+      "installedAt": "2026-03-16T06:35:46.857Z",
+      "updatedAt": "2026-03-16T06:35:46.857Z"
+    },
+    "tdd-workflow": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/tdd-workflow/SKILL.md",
+      "skillFolderHash": "9193495284b2df768d3b1e95ae346eedf8c23e4d",
+      "installedAt": "2026-03-16T06:35:46.897Z",
+      "updatedAt": "2026-03-16T06:35:46.897Z"
+    },
+    "testing-patterns": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/testing-patterns/SKILL.md",
+      "skillFolderHash": "73f3033757cb68109ff94f46c0954360270d4dc8",
+      "installedAt": "2026-03-16T06:35:46.943Z",
+      "updatedAt": "2026-03-16T06:35:46.943Z"
+    },
+    "vulnerability-scanner": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/vulnerability-scanner/SKILL.md",
+      "skillFolderHash": "52c089583be47e460cf4ec1a08c786af9bd367b9",
+      "installedAt": "2026-03-16T06:35:46.982Z",
+      "updatedAt": "2026-03-16T06:35:46.982Z"
+    },
+    "web-design-guidelines": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "63bfdc5040881f77bd028d5f793e523912d3f8aa",
+      "installedAt": "2026-03-16T06:35:47.023Z",
+      "updatedAt": "2026-03-16T06:35:47.023Z"
+    },
+    "webapp-testing": {
+      "source": "vudovn/antigravity-kit",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vudovn/antigravity-kit.git",
+      "skillPath": ".agent/skills/webapp-testing/SKILL.md",
+      "skillFolderHash": "77a6d4a133bc67a83b6b3d237a40138e0a5702a3",
+      "installedAt": "2026-03-16T06:35:47.063Z",
+      "updatedAt": "2026-03-16T06:35:47.063Z"
+    },
+    "daily": {
+      "source": "earlyaidopters/second-brain",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/earlyaidopters/second-brain.git",
+      "skillPath": "skills/daily/SKILL.md",
+      "skillFolderHash": "da96b03aec5ccc8dd588afcfddb5c929226b36d7",
+      "installedAt": "2026-03-16T06:35:56.091Z",
+      "updatedAt": "2026-03-16T06:35:56.091Z"
+    },
+    "file-intel": {
+      "source": "earlyaidopters/second-brain",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/earlyaidopters/second-brain.git",
+      "skillPath": "skills/file-intel/SKILL.md",
+      "skillFolderHash": "a797eb8a9fab60ac3b02d5127825a6e1d58fbca3",
+      "installedAt": "2026-03-16T06:35:56.130Z",
+      "updatedAt": "2026-03-16T06:35:56.130Z"
+    },
+    "tldr": {
+      "source": "earlyaidopters/second-brain",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/earlyaidopters/second-brain.git",
+      "skillPath": "skills/tldr/SKILL.md",
+      "skillFolderHash": "a67c30b57cf8e677f53994a153e652db37011ab0",
+      "installedAt": "2026-03-16T06:35:56.168Z",
+      "updatedAt": "2026-03-16T06:35:56.168Z"
+    },
+    "vault-setup": {
+      "source": "earlyaidopters/second-brain",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/earlyaidopters/second-brain.git",
+      "skillPath": "skills/vault-setup/SKILL.md",
+      "skillFolderHash": "3a48784a63e5edf0b53f21fec00df9b892eeee1e",
+      "installedAt": "2026-03-16T06:35:56.209Z",
+      "updatedAt": "2026-03-16T06:35:56.209Z"
+    }
+  },
+  "dismissed": {}
+}

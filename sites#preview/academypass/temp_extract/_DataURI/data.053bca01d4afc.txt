@@ -1,0 +1,1 @@
+chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/js/inliner/inliner_request.js

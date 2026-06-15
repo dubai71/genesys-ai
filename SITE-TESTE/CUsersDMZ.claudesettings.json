@@ -1,0 +1,1 @@
+{"permissions":{"allow":["Bash(ls:*)","Bash(cat:*)","Bash(pwd:*)","Bash(echo:*)","Bash(cd:*)","Bash(find:*)","Bash(grep:*)","Read(**)"],"deny":["Bash(rm:*)","Bash(rmdir:*)","Bash(del:*)","Bash(curl:*)","Bash(wget:*)"]}}

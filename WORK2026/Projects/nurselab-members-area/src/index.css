@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-red: #D91F27;
+    --white: #FFFFFF;
+    --soft-gray: #9C9D9D;
+    --deep-black: #111315;
+    --black-950: #08090B;
+    --black-900: #0B0C0F;
+    --black-850: #0F1014;
+    --black-800: #111315;
+    --black-700: #17191E;
+  }
+
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--deep-black);
+    color: var(--white);
+    font-family: "Muller", "Inter", sans-serif;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .glass-pill {
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+  }
+
+  .glass-pill-dpd {
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.38);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 34px;
+    box-shadow:
+      0 30px 90px rgba(0, 0, 0, 0.62),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  .netflix-card {
+    background: #16181D;
+    border-radius: 24px;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.42);
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+  }
+
+  .netflix-card:hover {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.58);
+    z-index: 10;
+  }
+
+  .icon {
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+
+  .icon-sm { width: 16px; height: 16px; }
+  .icon-md { width: 20px; height: 20px; }
+  .icon-lg { width: 24px; height: 24px; }
+  .icon-xl { width: 32px; height: 32px; }
+
+  .btn-primary {
+    background: var(--white);
+    color: var(--deep-black);
+    font-weight: 700;
+    border-radius: 999px;
+    border: none;
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.18);
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(255, 255, 255, 0.28);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(16px);
+    transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.13);
+    transform: translateY(-2px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

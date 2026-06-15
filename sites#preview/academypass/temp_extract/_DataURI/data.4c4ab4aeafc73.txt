@@ -1,0 +1,1 @@
+chrome-extension://glaedmooikiamindhmfcfccncmmdagge/content/browser/js/FBrowserInject.js

@@ -1,0 +1,7 @@
+{
+  "language": "portuguese",
+  "agentDefinitionsPath": ".claude/agents",
+  "customCommands": {
+    "sinapse": ".claude/commands/SINAPSE/sinapse.cjs"
+  }
+}

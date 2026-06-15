@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NurseLab - Configurar Supabase</title>
+  <style>
+    body { font-family: system-ui; padding: 2rem; background: #0a0a0a; color: #EDDABA; max-width: 500px; margin: 0 auto; }
+    input { width: 100%; padding: 0.75rem; margin: 0.5rem 0; background: #111; border: 1px solid #333; color: #EDDABA; border-radius: 5px; }
+    button { background: #FF5404; color: white; border: none; padding: 1rem 2rem; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 1rem; }
+    .success { color: #4ade80; padding: 1rem; background: rgba(74, 222, 128, 0.1); border-radius: 5px; margin-top: 1rem; display: none; }
+    .note { font-size: 12px; color: #888; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <h1>🔧 Configurar Supabase no NurseLab</h1>
+  <p>Cole suas credenciais abaixo para conectar ao Supabase:</p>
+
+  <label>URL do Projeto Supabase</label>
+  <input type="text" id="url" placeholder="https://xxx.supabase.co">
+
+  <label>Chave Pública (anon)</label>
+  <input type="text" id="key" placeholder="sb_publishable_...">
+
+  <button onclick="save()">Salvar no localStorage</button>
+
+  <div id="success" class="success">
+    ✓ Configuração salva!<br>
+    Agora vá no NurseLab e testeFunctions!
+  </div>
+
+  <p class="note">
+    💡 Depois de salvar, execute o SQL no Supabase SQL Editor para criar as tabelas.
+    O SQL está no módulo APIs do NurseLab.
+  </p>
+
+  <script>
+    function save() {
+      const url = document.getElementById('url').value.trim()
+      const key = document.getElementById('key').value.trim()
+
+      if (!url || !key) {
+        alert('Preencha ambos os campos!')
+        return
+      }
+
+      const config = {
+        apiKeys: {
+          supabaseUrl: url,
+          supabaseKey: key
+        },
+        textModel: 'claude-sonnet-4-5',
+        imageModel: 'fal-flux',
+        videoModel: 'seedance-v1',
+        theme: 'dark',
+        activeProfileId: 'default'
+      }
+
+      localStorage.setItem('nl_config', JSON.stringify(config))
+      document.getElementById('success').style.display = 'block'
+    }
+  </script>
+</body>
+</html>

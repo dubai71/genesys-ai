@@ -1,0 +1,128 @@
+{
+  "id": "69dd997a19927b6a8783d741",
+  "site_id": "78b8461d-22ea-46a6-9fd0-053e934e2313",
+  "build_id": "69dd997a19927b6a8783d73f",
+  "state": "ready",
+  "name": "content-os-insta-private",
+  "url": "http://content-os-insta-private.netlify.app",
+  "ssl_url": "https://content-os-insta-private.netlify.app",
+  "admin_url": "https://app.netlify.com/projects/content-os-insta-private",
+  "deploy_url": "http://69dd997a19927b6a8783d741--content-os-insta-private.netlify.app",
+  "deploy_ssl_url": "https://69dd997a19927b6a8783d741--content-os-insta-private.netlify.app",
+  "created_at": "2026-04-14T01:33:46.895Z",
+  "updated_at": "2026-04-14T01:34:38.811Z",
+  "user_id": "66c2634d2e7977f4cde44f5e",
+  "error_message": null,
+  "required": [],
+  "required_functions": [],
+  "commit_ref": null,
+  "review_id": null,
+  "branch": null,
+  "commit_url": null,
+  "skipped": null,
+  "locked": null,
+  "title": "Build from drop deployment",
+  "commit_message": null,
+  "review_url": null,
+  "published_at": "2026-04-14T01:34:33.449Z",
+  "context": "production",
+  "deploy_time": 45,
+  "available_functions": [
+    {
+      "n": "___netlify-server-handler",
+      "d": "52daab41a7a898fc5fb3ebda5ecf2f5270b3ea73fa74f1016d6323fe719b0c0f",
+      "dn": "Next.js Server Handler",
+      "g": "@netlify/plugin-nextjs@5.15.9",
+      "bd": {
+        "bootstrapVersion": "2.14.0",
+        "runtimeAPIVersion": 2
+      },
+      "ro": [
+        {
+          "p": "/*",
+          "l": null,
+          "e": "^(?:\\/(.*))\\/?$",
+          "m": [],
+          "ps": true
+        }
+      ],
+      "id": "4541677aa1796436014ebebb3aa212e961d2fffcc782f9e332acd2919f1c28e2",
+      "a": "520912904047",
+      "c": "2026-04-14T01:34:32.831Z",
+      "im": "stream",
+      "m": 1024,
+      "obl": "netlify-observability-extension",
+      "oblv": 32,
+      "oid": "855a40432b130c5950cad1255b99caab8a26b2260710fd8107972fb5a84d9d81",
+      "r": "nodejs18.x",
+      "rg": "us-east-2",
+      "s": 6425337
+    }
+  ],
+  "screenshot_url": "https://d33wubrfki0l68.cloudfront.net/69dd997a19927b6a8783d741/screenshot_2026-04-14-01-34-33-0000.webp",
+  "committer": null,
+  "skipped_log": null,
+  "manual_deploy": false,
+  "plugin_state": "success",
+  "lighthouse_plugin_scores": null,
+  "links": {
+    "permalink": "https://69dd997a19927b6a8783d741--content-os-insta-private.netlify.app",
+    "alias": "https://content-os-insta-private.netlify.app",
+    "branch": null
+  },
+  "framework": "next",
+  "entry_path": null,
+  "views_count": null,
+  "function_schedules": [],
+  "public_repo": null,
+  "pending_review_reason": null,
+  "lighthouse": null,
+  "edge_functions_present": null,
+  "expires_at": null,
+  "blobs_region": "us-east-2",
+  "deploy_validations_report": null,
+  "strict_contributor_verification_failure": false,
+  "agent_runner_id": null,
+  "deploy_source": null,
+  "database_branch_id": null,
+  "database_migrations": null,
+  "database_snapshots": null,
+  "skew_protection_token": "529d946ac794cc7d1bb016ed2092194db958fadc1876e8ffd1797bfd180d883d363964643939376131393932376236613837383364373431",
+  "has_source_zip": true,
+  "subdomain_alias": "69dd997a19927b6a8783d741",
+  "summary": {
+    "status": "ready",
+    "messages": [
+      {
+        "type": "info",
+        "title": "All files already uploaded",
+        "description": "All files already uploaded by a previous deploy with the same commits.",
+        "details": null
+      },
+      {
+        "type": "info",
+        "title": "4 redirect rules processed",
+        "description": "All redirect rules deployed without errors.",
+        "details": ""
+      },
+      {
+        "type": "info",
+        "title": "1 header rule processed",
+        "description": "All header rules deployed without errors.",
+        "details": ""
+      },
+      {
+        "type": "info",
+        "title": "1 function deployed",
+        "description": "We have deployed 1 function. [Visit your Functions](/projects/content-os-insta-private/logs/functions) for more information.",
+        "details": null
+      },
+      {
+        "type": "info",
+        "title": "No edge functions deployed",
+        "description": "This deploy did not include any edge functions. [Learn more about Edge Functions](https://docs.netlify.com/edge-functions/overview/)",
+        "details": null
+      }
+    ]
+  }
+}

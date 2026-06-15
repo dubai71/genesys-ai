@@ -1,0 +1,123 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(cuid())
+  email     String     @unique
+  name      String
+  password  String
+  role      String     @default("admin")
+  campaigns Campaign[]
+  assets    Asset[]
+  profiles  Profile[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Profile {
+  id        String   @id @default(cuid())
+  handle    String
+  platform  String   // instagram | tiktok | youtube
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  posts     Post[]
+  createdAt DateTime @default(now())
+
+  @@unique([handle, platform, userId])
+}
+
+model Post {
+  id         String   @id @default(cuid())
+  content    String?
+  mediaUrl   String?
+  platform   String
+  externalId String?
+  likes      Int      @default(0)
+  comments   Int      @default(0)
+  profileId  String
+  profile    Profile  @relation(fields: [profileId], references: [id])
+  createdAt  DateTime @default(now())
+}
+
+model Campaign {
+  id        String     @id @default(cuid())
+  name      String
+  status    String     @default("active") // active | paused | ended
+  budget    Float
+  platform  String     // meta | google | tiktok
+  userId    String
+  user      User       @relation(fields: [userId], references: [id])
+  creatives Creative[]
+  metrics   Metric[]
+  jobs      MediaJob[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Creative {
+  id         String   @id @default(cuid())
+  type       String   // image | video
+  url        String
+  status     String   @default("pending") // pending | active | paused | ready
+  prompt     String?
+  caption    String?
+  campaignId String
+  campaign   Campaign @relation(fields: [campaignId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Asset {
+  id          String   @id @default(cuid())
+  url         String
+  name        String
+  type        String   // image | video
+  description String?
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model MediaJob {
+  id         String   @id @default(cuid())
+  status     String   @default("queued") // queued | processing | done | failed
+  type       String   // image | video
+  payload    Json
+  result     Json?
+  campaignId String
+  campaign   Campaign @relation(fields: [campaignId], references: [id])
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Metric {
+  id          String   @id @default(cuid())
+  campaignId  String
+  campaign    Campaign @relation(fields: [campaignId], references: [id])
+  date        DateTime
+  impressions Int      @default(0)
+  clicks      Int      @default(0)
+  ctr         Float    @default(0)
+  spend       Float    @default(0)
+  roas        Float?
+  cpa         Float?
+  createdAt   DateTime @default(now())
+}
+
+model AgentLog {
+  id        String   @id @default(cuid())
+  agentType String   // analyst | creative | scraper | publisher
+  action    String
+  reasoning String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+}

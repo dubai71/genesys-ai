@@ -1,0 +1,884 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>a Fundação | Brand Guidelines</title>
+  <meta name="description" content="Brand book interativo para a Fundação, escola brasileira de Inteligência Artificial.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..900,0..100,0..1&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+    :root {
+      --black: #0A0A0A;
+      --ink: #15120F;
+      --bone: #F5F0E8;
+      --paper: #E7DED1;
+      --stone: #8B8378;
+      --signal: #B7FF2A;
+      --rust: #A64222;
+      --line: rgba(245, 240, 232, .18);
+      --line-dark: rgba(10, 10, 10, .18);
+      --display: "Fraunces", Georgia, serif;
+      --text: "Inter", Arial, sans-serif;
+      --mono: "IBM Plex Mono", Consolas, monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--bone);
+      font-family: var(--text);
+      letter-spacing: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+    svg { display: block; max-width: 100%; }
+    .page {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+    .side {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 28px 22px;
+      border-right: 1px solid var(--line);
+      background: #0A0A0A;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .side-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 760;
+    }
+    .mini-symbol {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--bone);
+      display: grid;
+      place-items: center;
+      color: var(--signal);
+    }
+    .nav {
+      display: grid;
+      gap: 4px;
+      margin-top: 42px;
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .nav a {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+      color: rgba(245, 240, 232, .72);
+    }
+    .nav a:hover { color: var(--signal); }
+    .side-meta {
+      color: rgba(245, 240, 232, .58);
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+    main { min-width: 0; }
+    .chapter {
+      min-height: 100vh;
+      padding: 80px clamp(28px, 7vw, 108px);
+      border-bottom: 1px solid var(--line);
+    }
+    .chapter.light {
+      background: var(--bone);
+      color: var(--ink);
+      border-bottom-color: var(--line-dark);
+    }
+    .kicker {
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      color: var(--signal);
+      margin-bottom: 22px;
+    }
+    .light .kicker { color: var(--rust); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(64px, 11vw, 170px);
+      line-height: .82;
+      letter-spacing: 0;
+      font-weight: 800;
+      max-width: 1060px;
+    }
+    h2 {
+      font-family: var(--display);
+      font-size: clamp(42px, 6vw, 92px);
+      line-height: .95;
+      font-weight: 760;
+      max-width: 920px;
+    }
+    h3 {
+      font-family: var(--display);
+      font-size: clamp(26px, 3vw, 42px);
+      line-height: 1;
+      font-weight: 700;
+    }
+    p {
+      color: rgba(245, 240, 232, .76);
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 720px;
+    }
+    .light p { color: rgba(21, 18, 15, .74); }
+    .lead {
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.25;
+      max-width: 920px;
+      color: var(--bone);
+    }
+    .light .lead { color: var(--ink); }
+    .wordmark {
+      display: inline-flex;
+      align-items: baseline;
+      gap: .12em;
+      font-family: var(--display);
+      font-weight: 820;
+      line-height: .85;
+    }
+    .wordmark .a {
+      color: var(--signal);
+      font-style: italic;
+      font-weight: 600;
+      transform: translateY(.03em);
+      display: inline-block;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 48px;
+      align-items: end;
+    }
+    .foundation-grid {
+      border: 1px solid var(--line);
+      aspect-ratio: 1;
+      background:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 12.5% 12.5%;
+      position: relative;
+      min-height: 360px;
+    }
+    .foundation-grid::before,
+    .foundation-grid::after {
+      content: "";
+      position: absolute;
+      background: var(--signal);
+    }
+    .foundation-grid::before {
+      left: 12.5%;
+      bottom: 12.5%;
+      width: 62.5%;
+      height: 12.5%;
+    }
+    .foundation-grid::after {
+      left: 25%;
+      bottom: 25%;
+      width: 12.5%;
+      height: 50%;
+      box-shadow: 25vw 0 0 -20vw var(--bone);
+    }
+    .rationale {
+      columns: 2 320px;
+      column-gap: 44px;
+      margin-top: 54px;
+    }
+    .rationale p {
+      break-inside: avoid;
+      margin-bottom: 20px;
+    }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 42px;
+    }
+    .panel {
+      border: 1px solid currentColor;
+      padding: 28px;
+      min-height: 220px;
+      background: transparent;
+    }
+    .panel.dark {
+      background: var(--black);
+      color: var(--bone);
+      border-color: var(--line);
+    }
+    .panel.bone {
+      background: var(--bone);
+      color: var(--ink);
+      border-color: var(--line-dark);
+    }
+    .logo-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 36px;
+    }
+    .logo-box {
+      min-height: 210px;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .light .logo-box { border-color: var(--line-dark); }
+    .logo-text {
+      font-family: var(--display);
+      font-size: clamp(34px, 4vw, 58px);
+      font-weight: 820;
+      line-height: .9;
+    }
+    .logo-text small {
+      display: block;
+      color: var(--stone);
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+    .stacked-logo { text-align: center; }
+    .stacked-logo .a { display: block; color: var(--signal); font-style: italic; font-size: .75em; }
+    .mono-logo {
+      color: var(--ink);
+      background: var(--bone);
+    }
+    .outline-logo {
+      -webkit-text-stroke: 1px currentColor;
+      color: transparent;
+    }
+    .symbol {
+      width: 118px;
+      height: 118px;
+    }
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border: 1px solid var(--line-dark);
+      margin-top: 34px;
+    }
+    .swatch {
+      min-height: 240px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid rgba(10, 10, 10, .18);
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .swatch:last-child { border-right: 0; }
+    .swatch strong { font-family: var(--text); font-size: 16px; text-transform: none; }
+    .type-sample {
+      display: grid;
+      gap: 22px;
+      margin-top: 36px;
+    }
+    .type-line {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 26px;
+      align-items: baseline;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+    .light .type-line { border-bottom-color: var(--line-dark); }
+    .type-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--stone);
+      text-transform: uppercase;
+    }
+    .display-sample { font-family: var(--display); font-size: clamp(44px, 6vw, 86px); line-height: .92; font-weight: 800; }
+    .text-sample { font-family: var(--text); font-size: 24px; line-height: 1.35; font-weight: 500; }
+    .mono-sample { font-family: var(--mono); font-size: 16px; line-height: 1.55; color: var(--signal); }
+    .graphic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 38px;
+    }
+    .pattern {
+      min-height: 330px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 40px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .pattern span {
+      position: absolute;
+      background: var(--signal);
+      display: block;
+    }
+    .pattern span:nth-child(1) { width: 280px; height: 40px; left: 40px; bottom: 40px; }
+    .pattern span:nth-child(2) { width: 40px; height: 200px; left: 80px; bottom: 80px; }
+    .pattern span:nth-child(3) { width: 40px; height: 120px; right: 120px; top: 80px; background: var(--bone); }
+    .number-list {
+      counter-reset: item;
+      display: grid;
+      gap: 14px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .number-list li {
+      counter-increment: item;
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 18px;
+      align-items: start;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+    .number-list li::before {
+      content: "0" counter(item);
+      font-family: var(--display);
+      color: var(--signal);
+      font-size: 52px;
+      line-height: .8;
+      font-weight: 800;
+    }
+    .applications {
+      display: grid;
+      gap: 42px;
+      margin-top: 42px;
+    }
+    .app-title {
+      font-family: var(--mono);
+      color: var(--stone);
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    .mock-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    .business-card {
+      aspect-ratio: 1.75;
+      padding: 28px;
+      border: 1px solid var(--line-dark);
+      background: var(--bone);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 220px;
+    }
+    .business-card.back {
+      background: var(--ink);
+      color: var(--bone);
+      border-color: var(--line);
+    }
+    .bc-name {
+      font-family: var(--display);
+      font-size: 32px;
+      line-height: .95;
+      font-weight: 800;
+    }
+    .bc-meta, .tiny-meta {
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      line-height: 1.7;
+    }
+    .linkedin-cover {
+      aspect-ratio: 4 / 1;
+      background: var(--ink);
+      color: var(--bone);
+      border: 1px solid var(--line);
+      padding: 34px 44px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      align-content: center;
+    }
+    .linkedin-cover .logo-text { font-size: clamp(44px, 7vw, 108px); }
+    .linkedin-cover .strip {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 42%;
+      height: 28%;
+      background: var(--signal);
+    }
+    .square-post {
+      aspect-ratio: 1;
+      max-width: 520px;
+      background: var(--bone);
+      color: var(--ink);
+      border: 1px solid var(--line-dark);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .post-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: start;
+      font-family: var(--mono);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    .post-title {
+      font-family: var(--display);
+      font-size: clamp(44px, 6vw, 78px);
+      line-height: .88;
+      font-weight: 840;
+    }
+    .story {
+      aspect-ratio: 9 / 16;
+      width: min(360px, 100%);
+      background: var(--black);
+      color: var(--bone);
+      border: 1px solid var(--line);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .story::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 92px;
+      width: 72%;
+      height: 46px;
+      background: var(--signal);
+      z-index: 0;
+    }
+    .story > * { position: relative; z-index: 1; }
+    .story-title {
+      font-family: var(--display);
+      font-size: 58px;
+      line-height: .86;
+      font-weight: 820;
+    }
+    .certificate {
+      aspect-ratio: 1.414 / 1;
+      background: var(--bone);
+      color: var(--ink);
+      border: 1px solid var(--line-dark);
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1fr 210px;
+      gap: 36px;
+      min-height: 420px;
+    }
+    .cert-title {
+      font-family: var(--display);
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: .9;
+      font-weight: 820;
+    }
+    .cert-name {
+      font-family: var(--display);
+      font-size: 42px;
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 12px;
+      margin: 42px 0 18px;
+    }
+    .slide {
+      aspect-ratio: 16 / 9;
+      background: var(--ink);
+      color: var(--bone);
+      border: 1px solid var(--line);
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+      background-size: 48px 48px;
+      opacity: .6;
+    }
+    .slide > * { position: relative; z-index: 1; }
+    .slide-title {
+      font-family: var(--display);
+      font-size: clamp(54px, 8vw, 116px);
+      line-height: .86;
+      font-weight: 840;
+      max-width: 780px;
+    }
+    .icon-set {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      background: var(--signal);
+      color: var(--ink);
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--ink);
+    }
+    .email-signature {
+      max-width: 680px;
+      background: var(--bone);
+      color: var(--ink);
+      border: 1px solid var(--line-dark);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 86px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+    .shirt {
+      width: min(420px, 100%);
+      aspect-ratio: .86;
+      background: var(--paper);
+      color: var(--ink);
+      position: relative;
+      clip-path: polygon(24% 0, 38% 0, 43% 8%, 57% 8%, 62% 0, 76% 0, 100% 22%, 86% 38%, 78% 31%, 78% 100%, 22% 100%, 22% 31%, 14% 38%, 0 22%);
+      display: grid;
+      place-items: center;
+    }
+    .shirt::after {
+      content: "a Fundacao";
+      position: absolute;
+      bottom: 42px;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    .tag {
+      display: inline-block;
+      border: 1px solid currentColor;
+      padding: 7px 9px;
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+    .accent { color: var(--signal); }
+    .rust { color: var(--rust); }
+    .muted { color: var(--stone); }
+    .caption {
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1.6;
+      color: var(--stone);
+      text-transform: uppercase;
+    }
+    @media (max-width: 980px) {
+      .page { grid-template-columns: 1fr; }
+      .side {
+        position: static;
+        height: auto;
+        gap: 24px;
+      }
+      .nav { grid-template-columns: repeat(2, 1fr); margin-top: 16px; }
+      .hero-grid, .spec-grid, .graphic-grid, .mock-row, .certificate {
+        grid-template-columns: 1fr;
+      }
+      .logo-row, .swatches { grid-template-columns: 1fr; }
+      .swatch { min-height: 160px; border-right: 0; border-bottom: 1px solid rgba(10, 10, 10, .18); }
+      .type-line { grid-template-columns: 1fr; }
+      .chapter { padding: 56px 22px; }
+      .linkedin-cover { aspect-ratio: auto; min-height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="side">
+      <div>
+        <a class="side-mark" href="#inicio" aria-label="Voltar ao inicio">
+          <span class="mini-symbol">
+            <svg viewBox="0 0 48 48" width="32" height="32" aria-hidden="true">
+              <rect x="6" y="34" width="36" height="6" fill="currentColor"/>
+              <rect x="12" y="12" width="6" height="22" fill="currentColor"/>
+              <rect x="30" y="12" width="6" height="22" fill="#F5F0E8"/>
+            </svg>
+          </span>
+          <span><span class="accent">a</span> Fundação</span>
+        </a>
+        <nav class="nav" aria-label="Capitulos">
+          <a href="#rationale">00 Rationale</a>
+          <a href="#logo">01 Logo</a>
+          <a href="#cores">02 Cores</a>
+          <a href="#tipografia">03 Tipos</a>
+          <a href="#sistema">04 Sistema</a>
+          <a href="#aplicacoes">05 Aplicacoes</a>
+        </nav>
+      </div>
+      <div class="side-meta">
+        Brand book v1.0<br>
+        Escola brasileira de IA<br>
+        Assinatura: Arthur<br>
+        @afundacao.ai
+      </div>
+    </aside>
+
+    <main>
+      <section class="chapter" id="inicio">
+        <div class="hero-grid">
+          <div>
+            <div class="kicker">Identidade visual completa</div>
+            <h1><span class="wordmark"><span class="a">a</span> Fundação</span></h1>
+            <p class="lead">Uma escola de Inteligencia Artificial com peso de biblioteca, rigor de engenharia e a calma de quem constroi antes de prometer.</p>
+          </div>
+          <div class="foundation-grid" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="chapter light" id="rationale">
+        <div class="kicker">00 Rationale criativo</div>
+        <h2>A base antes do atalho.</h2>
+        <div class="rationale">
+          <p>A direcao tipografica parte de uma serif contemporanea, densa e editorial. Fraunces foi escolhida por carregar memoria de livro, jornal e tese, mas com desenho flexivel o bastante para existir no digital. O "a" minusculo ganha tratamento italico e cor de acento porque ele e assinatura, nao artigo descartavel.</p>
+          <p>A paleta evita o repertorio generico de tecnologia. O preto quase absoluto e o bone formam uma sala silenciosa: alta leitura, autoridade e ausencia de ruido. O verde-lima entra como sinal de inteligencia operacional, quase uma anotacao fluorescente sobre papel antigo. O rust aparece como calor brasileiro, sem cair em tropicalismo decorativo.</p>
+          <p>O simbolo nasce de uma pedra angular modular: uma base horizontal e dois pilares em tensao. Ele pode ser lido como estrutura, fundacao, porta de entrada ou monograma abstrato aF. A marca nao tenta desenhar IA; ela desenha o lugar onde conhecimento complexo fica de pe.</p>
+          <p>O sistema grafico usa grade, numeracao pesada e contraste entre espacos vazios e blocos secos. A sensacao desejada e de uma instituicao nova, mas nao ansiosa: algo que poderia estar numa livraria da Vila Madalena, numa sala de aula tecnica e num produto digital serio ao mesmo tempo.</p>
+        </div>
+      </section>
+
+      <section class="chapter" id="logo">
+        <div class="kicker">01 Logotipo e marca</div>
+        <h2>Serif editorial, construcao brutalista.</h2>
+        <p>O logotipo principal usa contraste tipografico para separar assinatura e instituicao. O monograma funciona em tamanhos pequenos, em relevo seco, favicon, camiseta e vinheta de aula.</p>
+
+        <div class="logo-row">
+          <div class="logo-box">
+            <div class="logo-text"><span class="accent" style="font-style:italic">a</span> Fundação<small>Versao principal horizontal</small></div>
+          </div>
+          <div class="logo-box">
+            <div class="logo-text stacked-logo"><span class="a">a</span> Fundação<small>Versao empilhada</small></div>
+          </div>
+          <div class="logo-box">
+            <svg class="symbol" viewBox="0 0 120 120" aria-label="Monograma a Fundacao">
+              <rect x="12" y="84" width="96" height="16" fill="#B7FF2A"/>
+              <rect x="28" y="24" width="16" height="60" fill="#B7FF2A"/>
+              <rect x="76" y="24" width="16" height="60" fill="#F5F0E8"/>
+              <path d="M44 24h48v16H60v18h24v16H60v10H44V24Z" fill="#F5F0E8" opacity=".28"/>
+            </svg>
+          </div>
+          <div class="logo-box mono-logo">
+            <div class="logo-text"><span style="font-style:italic">a</span> Fundação<small>Monocromatica preta</small></div>
+          </div>
+          <div class="logo-box panel dark">
+            <div class="logo-text" style="color:#F5F0E8"><span style="font-style:italic">a</span> Fundação<small>Monocromatica branca</small></div>
+          </div>
+          <div class="logo-box">
+            <div class="logo-text outline-logo"><span style="font-style:italic">a</span> Fundação<small>Versao em contorno</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter light" id="cores">
+        <div class="kicker">02 Paleta cromatica</div>
+        <h2>Cinco cores. Nenhum efeito gratuito.</h2>
+        <p>A paleta foi calibrada para materiais editoriais, interfaces escuras e impressoes simples. O acento deve aparecer pouco, como marcador de pagina, chamada de aula ou elemento estrutural.</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#0A0A0A;color:#F5F0E8"><strong>Preto Aula</strong><span>#0A0A0A</span></div>
+          <div class="swatch" style="background:#F5F0E8;color:#15120F"><strong>Bone Biblioteca</strong><span>#F5F0E8</span></div>
+          <div class="swatch" style="background:#B7FF2A;color:#15120F"><strong>Sinal Fundacao</strong><span>#B7FF2A</span></div>
+          <div class="swatch" style="background:#8B8378;color:#F5F0E8"><strong>Pedra Neutra</strong><span>#8B8378</span></div>
+          <div class="swatch" style="background:#A64222;color:#F5F0E8"><strong>Barro Editorial</strong><span>#A64222</span></div>
+        </div>
+      </section>
+
+      <section class="chapter" id="tipografia">
+        <div class="kicker">03 Tipografia</div>
+        <h2>Hierarquia de livro, ritmo de produto.</h2>
+        <div class="type-sample">
+          <div class="type-line">
+            <div class="type-label">Display / Fraunces 800</div>
+            <div class="display-sample">Fundamentos nao sao atalhos.</div>
+          </div>
+          <div class="type-line">
+            <div class="type-label">Texto / Inter 500</div>
+            <div class="text-sample">Dominar IA exige repertorio, criterio e metodo. A escola organiza a base para quem quer construir com consistencia.</div>
+          </div>
+          <div class="type-line">
+            <div class="type-label">Tecnica / IBM Plex Mono 500</div>
+            <div class="mono-sample">modulo_03 / avaliacao: raciocinio, agentes, automacao, memoria</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter" id="sistema">
+        <div class="kicker">04 Elementos auxiliares</div>
+        <h2>Grade como fundacao, numero como arquitetura.</h2>
+        <div class="graphic-grid">
+          <div class="pattern" aria-label="Padrao modular da marca"><span></span><span></span><span></span></div>
+          <div>
+            <ol class="number-list">
+              <li><div><h3>Base</h3><p>Antes de ferramenta, vocabulario. Antes de automacao, criterio. Antes de escala, estrutura.</p></div></li>
+              <li><div><h3>Metodo</h3><p>Aulas com exemplos reais, mapas mentais densos e exercicios que cobram decisao, nao decoracao.</p></div></li>
+              <li><div><h3>Imagem</h3><p>Fotografia seca, luz natural, arquivos, livros, concreto, papel, tela preta, maos trabalhando. Nada de robos, circuitos ou neon.</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="chapter light" id="aplicacoes">
+        <div class="kicker">05 Aplicacoes</div>
+        <h2>O sistema em uso.</h2>
+        <p>As pecas abaixo foram renderizadas em HTML e CSS, sem imagens externas. Os tamanhos respeitam as proporcoes pedidas para redes, aula, certificado e materiais de marca.</p>
+
+        <div class="applications">
+          <div>
+            <div class="app-title">Cartao de visita / frente e verso</div>
+            <div class="mock-row">
+              <div class="business-card">
+                <div class="logo-text"><span class="rust" style="font-style:italic">a</span> Fundação</div>
+                <div>
+                  <div class="bc-name">Arthur<br>Diretor de IA</div>
+                  <div class="bc-meta">arthur@afundacao.ai<br>@afundacao.ai</div>
+                </div>
+              </div>
+              <div class="business-card back">
+                <svg class="symbol" viewBox="0 0 120 120" aria-hidden="true">
+                  <rect x="12" y="84" width="96" height="16" fill="#B7FF2A"/>
+                  <rect x="28" y="24" width="16" height="60" fill="#B7FF2A"/>
+                  <rect x="76" y="24" width="16" height="60" fill="#F5F0E8"/>
+                </svg>
+                <div class="bc-meta">Base estrutural do conhecimento em IA<br>Sao Paulo / Brasil</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="app-title">Capa de LinkedIn / 1584 x 396</div>
+            <div class="linkedin-cover">
+              <div class="strip"></div>
+              <div class="logo-text"><span class="accent" style="font-style:italic">a</span> Fundação</div>
+              <p>Para quem quer dominar IA por fundamentos, nao por truques.</p>
+              <div class="caption">linkedin.com/company/afundacao-ai</div>
+            </div>
+          </div>
+
+          <div class="mock-row">
+            <div>
+              <div class="app-title">Post Instagram / 1:1</div>
+              <div class="square-post">
+                <div class="post-head"><span>Aula aberta</span><span>Quarta / 20h</span></div>
+                <div class="post-title">O que muda quando voce entende agentes.</div>
+                <div class="post-head"><span>@afundacao.ai</span><span>com Arthur</span></div>
+              </div>
+            </div>
+            <div>
+              <div class="app-title">Story Instagram / 9:16</div>
+              <div class="story">
+                <div class="post-head"><span>a Fundação</span><span>Turma 01</span></div>
+                <div class="story-title">Inicio da turma.</div>
+                <div>
+                  <p>Fundamentos de IA para profissionais que constroem.</p>
+                  <div class="tag">Inscricoes abertas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="app-title">Certificado de conclusao / A4 horizontal</div>
+            <div class="certificate">
+              <div>
+                <div class="caption">Certificado de conclusao</div>
+                <div class="cert-title">Fundamentos Estruturais de IA</div>
+                <div class="cert-name">Nome do aluno</div>
+                <p>Concluiu a formacao da a Fundação, com carga horaria, avaliacao pratica e projeto final supervisionado.</p>
+                <div class="bc-meta">Arthur / Diretor de IA<br>Emitido em 2026</div>
+              </div>
+              <div style="display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end">
+                <svg class="symbol" viewBox="0 0 120 120" aria-hidden="true">
+                  <rect x="12" y="84" width="96" height="16" fill="#15120F"/>
+                  <rect x="28" y="24" width="16" height="60" fill="#15120F"/>
+                  <rect x="76" y="24" width="16" height="60" fill="#A64222"/>
+                </svg>
+                <div class="caption">validacao<br>AF-2026-001</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="app-title">Slide de abertura / 16:9</div>
+            <div class="slide">
+              <div class="post-head"><span>Modulo 02</span><span>Raciocinio e contexto</span></div>
+              <div class="slide-title">Como pensar com modelos, sem terceirizar criterio.</div>
+              <div class="post-head"><span>a Fundação</span><span>Arthur</span></div>
+            </div>
+          </div>
+
+          <div class="mock-row">
+            <div>
+              <div class="app-title">Favicon / app icon</div>
+              <div class="icon-set">
+                <div class="app-icon">
+                  <svg viewBox="0 0 120 120" width="72" height="72" aria-hidden="true">
+                    <rect x="12" y="84" width="96" height="16" fill="#15120F"/>
+                    <rect x="28" y="24" width="16" height="60" fill="#15120F"/>
+                    <rect x="76" y="24" width="16" height="60" fill="#15120F"/>
+                  </svg>
+                </div>
+                <div class="caption">Uso recomendado em fundo Sinal Fundacao para maxima legibilidade.</div>
+              </div>
+            </div>
+            <div>
+              <div class="app-title">Assinatura de e-mail</div>
+              <div class="email-signature">
+                <svg viewBox="0 0 120 120" width="78" height="78" aria-hidden="true">
+                  <rect x="12" y="84" width="96" height="16" fill="#B7FF2A"/>
+                  <rect x="28" y="24" width="16" height="60" fill="#15120F"/>
+                  <rect x="76" y="24" width="16" height="60" fill="#15120F"/>
+                </svg>
+                <div>
+                  <div class="bc-name">Arthur</div>
+                  <div class="bc-meta">Diretor de IA / a Fundação<br>arthur@afundacao.ai / @afundacao.ai<br>linkedin.com/company/afundacao-ai</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="app-title">Camiseta / merch</div>
+            <div class="shirt">
+              <svg class="symbol" viewBox="0 0 120 120" aria-hidden="true">
+                <rect x="12" y="84" width="96" height="16" fill="#15120F"/>
+                <rect x="28" y="24" width="16" height="60" fill="#15120F"/>
+                <rect x="76" y="24" width="16" height="60" fill="#A64222"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

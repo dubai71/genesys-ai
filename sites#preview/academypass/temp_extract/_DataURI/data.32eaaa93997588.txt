@@ -1,0 +1,1 @@
+chrome-extension://mchdgimobfnilobnllpdnompfjkkfdmi/content/js/inject/translator.js

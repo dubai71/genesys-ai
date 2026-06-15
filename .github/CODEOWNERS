@@ -1,0 +1,12 @@
+# Code Owners — genesys
+# All PRs require approval from an owner before merge.
+
+# Default: all files require maintainer review
+* @maintainer
+
+# Framework and agent configuration
+.sinapse-ai/ @maintainer
+.claude/      @maintainer
+
+# CI/CD and GitHub config
+.github/      @maintainer

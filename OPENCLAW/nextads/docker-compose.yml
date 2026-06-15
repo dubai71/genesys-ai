@@ -1,0 +1,78 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: nextads-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: nextads
+      POSTGRES_PASSWORD: nextads_secret
+      POSTGRES_DB: nextads_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U nextads -d nextads_db']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: nextads-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: nextads
+      RABBITMQ_DEFAULT_PASS: nextads_secret
+      RABBITMQ_DEFAULT_VHOST: nextads
+    ports:
+      - '5672:5672'
+      - '15672:15672'   # Management UI: http://localhost:15672
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    healthcheck:
+      test: ['CMD', 'rabbitmq-diagnostics', '-q', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./nextads-backend
+      dockerfile: Dockerfile
+    container_name: nextads-backend
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://nextads:nextads_secret@postgres:5432/nextads_db
+      RABBITMQ_URL: amqp://nextads:nextads_secret@rabbitmq:5672/nextads
+      JWT_SECRET: change_me_in_production
+      PORT: 3001
+    ports:
+      - '3001:3001'
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    volumes:
+      - ./nextads-backend/src:/app/src
+
+  frontend:
+    build:
+      context: ./nextads-frontend
+      dockerfile: Dockerfile
+    container_name: nextads-frontend
+    restart: unless-stopped
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:3001
+      NEXT_PUBLIC_WS_URL: ws://localhost:3001
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  rabbitmq_data:
