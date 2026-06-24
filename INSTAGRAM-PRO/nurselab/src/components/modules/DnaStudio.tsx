@@ -21,8 +21,8 @@ const DEFAULT_TEMPLATES: PromptTemplate[] = [
       { id: 'v1', name: 'topic', label: 'Tópico principal', type: 'text', required: true },
       { id: 'v2', name: 'headline', label: 'Headline (título)', type: 'text', required: true },
       { id: 'v3', name: 'subtitle', label: 'Subtítulo', type: 'text', required: false },
-      { id: 'v4', name: 'color1', label: 'Cor principal', type: 'color', defaultValue: '#FF5404' },
-      { id: 'v5', name: 'color2', label: 'Cor secundária', type: 'color', defaultValue: '#071925' },
+      { id: 'v4', name: 'color1', label: 'Cor principal', type: 'color', required: false, defaultValue: '#FF5404' },
+      { id: 'v5', name: 'color2', label: 'Cor secundária', type: 'color', required: false, defaultValue: '#071925' },
     ],
     defaultModel: 'flux-1-dev',
     defaultAspectRatio: '1:1',
@@ -44,9 +44,9 @@ const DEFAULT_TEMPLATES: PromptTemplate[] = [
       { id: 'w1', name: 'topic', label: 'Tópico', type: 'text', required: true },
       { id: 'w2', name: 'headline', label: 'Título principal', type: 'text', required: true },
       { id: 'w3', name: 'body', label: 'Texto do slide', type: 'text', required: true },
-      { id: 'w4', name: 'slideCount', label: 'Número de slides', type: 'text', defaultValue: '5' },
-      { id: 'w5', name: 'color1', label: 'Cor de destaque', type: 'color', defaultValue: '#005FB8' },
-      { id: 'w6', name: 'color2', label: 'Cor de fundo', type: 'color', defaultValue: '#F5F5F5' },
+      { id: 'w4', name: 'slideCount', label: 'Número de slides', type: 'text', required: false, defaultValue: '5' },
+      { id: 'w5', name: 'color1', label: 'Cor de destaque', type: 'color', required: false, defaultValue: '#005FB8' },
+      { id: 'w6', name: 'color2', label: 'Cor de fundo', type: 'color', required: false, defaultValue: '#F5F5F5' },
     ],
     defaultModel: 'flux-1-dev',
     defaultAspectRatio: '4:5',
@@ -66,9 +66,9 @@ const DEFAULT_TEMPLATES: PromptTemplate[] = [
     variables: [
       { id: 'm1', name: 'topic', label: 'Tópico', type: 'text', required: true },
       { id: 'm2', name: 'headline', label: 'Headline', type: 'text', required: true },
-      { id: 'm3', name: 'color1', label: 'Cor primária', type: 'color', defaultValue: '#1A6B4C' },
-      { id: 'm4', name: 'color2', label: 'Cor neutra', type: 'color', defaultValue: '#F8F9FA' },
-      { id: 'm5', name: 'color3', label: 'Cor de texto', type: 'color', defaultValue: '#212529' },
+      { id: 'm3', name: 'color1', label: 'Cor primária', type: 'color', required: false, defaultValue: '#1A6B4C' },
+      { id: 'm4', name: 'color2', label: 'Cor neutra', type: 'color', required: false, defaultValue: '#F8F9FA' },
+      { id: 'm5', name: 'color3', label: 'Cor de texto', type: 'color', required: false, defaultValue: '#212529' },
     ],
     defaultModel: 'flux-1-dev',
     defaultAspectRatio: '4:5',
@@ -108,9 +108,9 @@ const DEFAULT_TEMPLATES: PromptTemplate[] = [
     variables: [
       { id: 'ts1', name: 'topic', label: 'Tópico', type: 'text', required: true },
       { id: 'ts2', name: 'content', label: 'Conteúdo do tweet', type: 'text', required: true },
-      { id: 'ts3', name: 'tweetNumber', label: 'Nº do tweet', type: 'text', defaultValue: '1' },
-      { id: 'ts4', name: 'totalTweets', label: 'Total de tweets', type: 'text', defaultValue: '8' },
-      { id: 'ts5', name: 'color', label: 'Cor de destaque', type: 'color', defaultValue: '#FF5404' },
+      { id: 'ts3', name: 'tweetNumber', label: 'Nº do tweet', type: 'text', required: false, defaultValue: '1' },
+      { id: 'ts4', name: 'totalTweets', label: 'Total de tweets', type: 'text', required: false, defaultValue: '8' },
+      { id: 'ts5', name: 'color', label: 'Cor de destaque', type: 'color', required: false, defaultValue: '#FF5404' },
     ],
     defaultModel: 'flux-1-dev',
     defaultAspectRatio: '4:5',
@@ -130,10 +130,10 @@ const DEFAULT_TEMPLATES: PromptTemplate[] = [
     variables: [
       { id: 'ad1', name: 'topic', label: 'Produto/serviço', type: 'text', required: true },
       { id: 'ad2', name: 'headline', label: 'Headline', type: 'text', required: true },
-      { id: 'ad3', name: 'cta', label: 'CTA', type: 'text', defaultValue: 'Saiba mais' },
+      { id: 'ad3', name: 'cta', label: 'CTA', type: 'text', required: false, defaultValue: 'Saiba mais' },
       { id: 'ad4', name: 'price', label: 'Preço (opcional)', type: 'text', required: false },
-      { id: 'ad5', name: 'color1', label: 'Cor CTA', type: 'color', defaultValue: '#FF5404' },
-      { id: 'ad6', name: 'color2', label: 'Cor fundo', type: 'color', defaultValue: '#071925' },
+      { id: 'ad5', name: 'color1', label: 'Cor CTA', type: 'color', required: false, defaultValue: '#FF5404' },
+      { id: 'ad6', name: 'color2', label: 'Cor fundo', type: 'color', required: false, defaultValue: '#071925' },
     ],
     defaultModel: 'flux-1-dev',
     defaultAspectRatio: '1:1',
@@ -333,7 +333,7 @@ export default function DnaStudio() {
     const urls = batchImages.filter(r => r.imageUrl).map(r => r.imageUrl!)
     const prompts = batchImages.filter(r => r.prompt).map(r => r.prompt)
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && selectedTemplate) {
       sessionStorage.setItem('nl_dna_batch_urls', JSON.stringify(urls))
       sessionStorage.setItem('nl_dna_batch_prompts', JSON.stringify(prompts))
       sessionStorage.setItem('nl_dna_model', selectedTemplate.defaultModel)
