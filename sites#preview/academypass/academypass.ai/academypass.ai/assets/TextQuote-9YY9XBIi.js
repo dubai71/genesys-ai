@@ -30,7 +30,7 @@ var s = a(),
                 className: "flex justify-center mb-8 md:mb-12",
                 children: (0, s.jsx)("img", {
                     src: "/assets/pass.svg",
-                    alt: "Human Pass",
+                    alt: "NurseHub Pass",
                     className: "h-9 md:h-11 w-auto opacity-90",
                     style: {
                         filter: "brightness(0)"
@@ -59,7 +59,7 @@ var s = a(),
                 style: {
                     color: "hsl(222 18% 18%)"
                 },
-                children: ["Uma plataforma completa para criativos que levam IA a sério.", (0, s.jsx)("br", {
+                children: ["Muito mais que uma plataforma. Um ecossistema completo para profissionais que decidiram construir a próxima geração da enfermagem.", (0, s.jsx)("br", {
                     className: "hidden md:inline"
                 }), (0, s.jsxs)("span", {
                     style: {
@@ -90,7 +90,7 @@ var s = a(),
                     className: "h-px w-8 bg-foreground/20"
                 }), (0, s.jsx)("span", {
                     className: "font-body text-[11px] md:text-xs text-foreground/55 tracking-[0.08em]",
-                    children: "A maior plataforma de IA para criativos"
+                    children: "A comunidade da Nova Enfermagem Digital"
                 }), (0, s.jsx)("span", {
                     className: "h-px w-8 bg-foreground/20"
                 })]

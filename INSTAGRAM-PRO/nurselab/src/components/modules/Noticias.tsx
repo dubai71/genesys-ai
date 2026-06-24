@@ -23,13 +23,13 @@ export default function Noticias() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [lastFetch, setLastFetch] = useState<string | null>(null)
-  const [provider, setProvider] = useState('Perplexica')
+  const [provider, setProvider] = useState('Tavily')
   const [usingFallback, setUsingFallback] = useState(true)
   const [hasSearchProvider, setHasSearchProvider] = useState(false)
 
   useEffect(() => {
     const cfg = storage.getConfig()
-    const configured = !!(cfg.apiKeys.tavily || cfg.apiKeys.perplexicaUrl || cfg.apiKeys.perplexity)
+    const configured = !!(cfg.apiKeys.tavily || cfg.apiKeys.perplexicaUrl)
     setHasSearchProvider(configured)
     if (configured) handleFetch('todos')
   }, [])
@@ -37,7 +37,7 @@ export default function Noticias() {
   async function handleFetch(cat: Category) {
     const cfg = storage.getConfig()
 
-    if (!cfg.apiKeys.tavily && !cfg.apiKeys.perplexicaUrl && !cfg.apiKeys.perplexity) {
+    if (!cfg.apiKeys.tavily && !cfg.apiKeys.perplexicaUrl) {
       setHasSearchProvider(false)
       setError('Configure Tavily API key em APIs & Configuracoes (gratuita em app.tavily.com).')
       setUsingFallback(true)
@@ -54,14 +54,14 @@ export default function Noticias() {
 
       if (items.length > 0) {
         setNews(items)
-        setProvider(data.provider === 'tavily' ? 'Tavily' : data.provider === 'perplexity' ? 'Perplexity' : 'Perplexica')
+        setProvider(data.provider === 'tavily' ? 'Tavily' : 'Perplexica')
         setUsingFallback(false)
         setLastFetch(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }))
       }
     } catch (e: any) {
       setError(e.message || 'Erro ao buscar noticias. Exibindo exemplos locais.')
       setNews(FALLBACK)
-      setProvider('Perplexica')
+      setProvider('Tavily')
       setUsingFallback(true)
     } finally {
       setLoading(false)

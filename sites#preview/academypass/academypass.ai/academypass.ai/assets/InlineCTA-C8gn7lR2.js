@@ -6,7 +6,7 @@ import {
 } from "./index-W86zpBsQ.js";
 var a = e(),
     t = ({
-        label: e = "Quero fazer parte",
+        label: e = "Tornar-se um membro fundador",
         variant: t = "dark",
         className: o = ""
     }) => {

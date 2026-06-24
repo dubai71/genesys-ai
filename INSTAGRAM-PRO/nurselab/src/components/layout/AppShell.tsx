@@ -8,6 +8,7 @@ import Calendario from '../modules/Calendario'
 import Conteudo from '../modules/Conteudo'
 import Biblioteca from '../modules/Biblioteca'
 import GeneratorLab from '../modules/GeneratorLab'
+import DnaStudio from '../modules/DnaStudio'
 import Concorrentes from '../modules/Concorrentes'
 import Noticias from '../modules/Noticias'
 import Negocio from '../modules/Negocio'
@@ -17,7 +18,7 @@ import Apis from '../modules/Apis'
 import { storage, SAMPLE_POSTS, SAMPLE_COMPETITORS, DEFAULT_PROFILE } from '@/lib/storage'
 import type { Profile } from '@/types'
 
-export type Page = 'dashboard'|'instagram'|'analytics'|'calendario'|'conteudo'|'generatorlab'|'biblioteca'|'concorrentes'|'noticias'|'negocio'|'templates'|'perfis'|'apis'
+export type Page = 'dashboard'|'instagram'|'analytics'|'calendario'|'conteudo'|'generatorlab'|'dnastudio'|'biblioteca'|'concorrentes'|'noticias'|'negocio'|'templates'|'perfis'|'apis'
 
 export default function AppShell() {
   const [page, setPage] = useState<Page>('dashboard')
@@ -61,6 +62,7 @@ export default function AppShell() {
     calendario:   <Calendario />,
     conteudo:     <Conteudo />,
     generatorlab: <GeneratorLab />,
+    dnastudio:    <DnaStudio />,
     biblioteca:   <Biblioteca />,
     concorrentes: <Concorrentes />,
     noticias:     <Noticias />,

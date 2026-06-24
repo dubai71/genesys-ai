@@ -409,96 +409,96 @@ var ge = j.forwardRef(({
 }));
 ge.displayName = ve.displayName;
 var je = [{
-        q: "Como faÃ§o para acessar o Academy Pass?",
-        a: "Assim que vocÃª finaliza a compra, enviamos um e-mail com todas as instruÃ§Ãµes de acesso pela plataforma. Ã‰ o mesmo e-mail usado na compra. Vale conferir o spam e lixo eletrÃ´nico ;)",
+        q: "Como faço para acessar o NurseHub Pass?",
+        a: "Assim que você finaliza a compra, enviamos um e-mail com todas as instruções de acesso pela plataforma. É o mesmo e-mail usado na compra. Vale conferir o spam e lixo eletr´nico ;)",
         visible: !0
     }, {
-        q: "O acesso Ã© imediato apÃ³s a compra?",
-        a: "Sim! ApÃ³s a confirmaÃ§Ã£o do pagamento, vocÃª recebe as instruÃ§Ãµes por e-mail e jÃ¡ pode comeÃ§ar a acessar. Se o pagamento for via boleto, o acesso Ã© liberado em atÃ© 48h.",
+        q: "O acesso é imediato após a compra?",
+        a: "Sim! Após a confirmação do pagamento, você recebe as instruções por e-mail e já pode começar a acessar. Se o pagamento for via boleto, o acesso é liberado em até 48h.",
         visible: !0
     }, {
         q: "Quanto tempo tenho de acesso?",
-        a: "VocÃª tem 1 ano de acesso para usar quando e onde quiser!",
+        a: "Você tem 1 ano de acesso para usar quando e onde quiser!",
         visible: !0
     }, {
-        q: "Quantos cursos tem na Human Academy?",
-        a: "O Academy Pass te dÃ¡ acesso aos mais de 8 cursos completos da Human Academy, com mais de 330 aulas, mais de 70h de conteÃºdo gravado, alÃ©m das lives e workshops que ficam gravadas e disponÃ­veis na plataforma para vocÃª assistir no seu tempo.",
+        q: "Quantos cursos tem na NurseHub?",
+        a: "O NurseHub Pass te dá acesso aos mais de 8 cursos completos da NurseHub, com mais de 330 aulas, mais de 70h de conteúdo gravado, além das lives e workshops que ficam gravadas e disponíveis na plataforma para você assistir no seu tempo.",
         visible: !0
     }, {
-        q: "Quais sÃ£o os bÃ´nus do Academy Pass?",
-        a: "AlÃ©m de todos os cursos e aulas ao vivo semanais, vocÃª tambÃ©m tem acesso Ã s lives, workshops gravados e atualizaÃ§Ãµes constantes. O Academy Pass inclui ainda 1 mÃªs de acesso ao LTX e mais de 20 ferramentas que vÃ£o te ajudar a criar com IA.",
+        q: "Quais são os b´nus do NurseHub Pass?",
+        a: "Além de todos os cursos e aulas ao vivo semanais, você também tem acesso  s lives, workshops gravados e atualizações constantes. O NurseHub Pass inclui ainda 1 mês de acesso ao LTX e mais de 20 ferramentas que vão te ajudar a criar com IA.",
         visible: !0
     }, {
-        q: "As aulas sÃ£o ao vivo ou gravadas?",
-        a: "As aulas sÃ£o gravadas para vocÃª assistir no seu ritmo e toda semana nÃ³s temos aulas ao vivo dentro da plataforma. As lives e workshops tambÃ©m ficam gravados para vocÃª poder acessar depois!",
+        q: "As aulas são ao vivo ou gravadas?",
+        a: "As aulas são gravadas para você assistir no seu ritmo e toda semana nós temos aulas ao vivo dentro da plataforma. As lives e workshops também ficam gravados para você poder acessar depois!",
         visible: !0
     }, {
-        q: "O Academy Pass tem garantia?",
-        a: "Sim, vocÃª tem 7 dias de garantia, vocÃª pode cancelar dentro desses dias de forma simples e tranquila!",
+        q: "O NurseHub Pass tem garantia?",
+        a: "Sim, você tem 7 dias de garantia, você pode cancelar dentro desses dias de forma simples e tranquila!",
         visible: !0
     }, {
         q: "Qual o link do canal de atendimento da Human?",
-        a: "VocÃª pode falar com a gente por aqui: https://bit.ly/atendimentohumanacademy",
+        a: "Você pode falar com a gente por aqui: https://bit.ly/atendimentohumanacademy",
         visible: !0
     }, {
-        q: "Os certificados sÃ£o individuais por curso? Posso postar eles no meu LinkedIn?",
-        a: "Sim e sim :) todos os cursos possuem certificado individuais e aconselhamos que vocÃª poste eles no seu Linkedin! Adicionar seus certificados sÃ³ vai ajudar a fortalecer seu perfil profissional.",
+        q: "Os certificados são individuais por curso? Posso postar eles no meu LinkedIn?",
+        a: "Sim e sim :) todos os cursos possuem certificado individuais e aconselhamos que você poste eles no seu Linkedin! Adicionar seus certificados só vai ajudar a fortalecer seu perfil profissional.",
         visible: !0
     }, {
         q: "Os cursos servem para iniciantes?",
-        a: "Sim, os nossos cursos vÃ£o do iniciante ao avanÃ§ado. Muitos comeÃ§am do bÃ¡sico e ensinam de forma prÃ¡tica, permitindo que quem nÃ£o tem experiÃªncia consiga acompanhar.",
+        a: "Sim, os nossos cursos vão do iniciante ao avançado. Muitos começam do básico e ensinam de forma prática, permitindo que quem não tem experiência consiga acompanhar.",
         visible: !0
     }, {
-        q: "O Academy Pass Ã© atualizado com novas ferramentas de IA?",
-        a: "Com certeza! Sempre que surge algo relevante, a gente testa no estÃºdio, valida o workflow e depois grava novas aulas para atualizar o Academy Pass.",
+        q: "O NurseHub Pass é atualizado com novas ferramentas de IA?",
+        a: "Com certeza! Sempre que surge algo relevante, a gente testa no estúdio, valida o workflow e depois grava novas aulas para atualizar o NurseHub Pass.",
         visible: !0
     }, {
         q: "Como funciona a comunidade da Human?",
-        a: "A comunidade funciona dentro da nossa plataforma! Temos trocas diÃ¡rias entre os alunos e nosso time.",
+        a: "A comunidade funciona dentro da nossa plataforma! Temos trocas diárias entre os alunos e nosso time.",
         visible: !0
     }, {
-        q: "As ferramentas estÃ£o inclusas no valor?",
-        a: "Todas as ferramentas de criaÃ§Ã£o de prompts estÃ£o inclusas no Academy Pass, sÃ£o elas que lhe farÃ£o economizar crÃ©ditos quando for criar nas ferramentas de geraÃ§Ã£o de imagem e vÃ­deos. As assinaturas das ferramentas de geraÃ§Ã£o de imagem e vÃ­deos nÃ£o estÃ£o inclusas, o que te dÃ¡ liberdade de escolha.",
+        q: "As ferramentas estão inclusas no valor?",
+        a: "Todas as ferramentas de criação de prompts estão inclusas no NurseHub Pass, são elas que lhe farão economizar créditos quando for criar nas ferramentas de geração de imagem e vídeos. As assinaturas das ferramentas de geração de imagem e vídeos não estão inclusas, o que te dá liberdade de escolha.",
         visible: !0
     }, {
-        q: "O conteÃºdo Ã© focado em teoria ou prÃ¡tica? As aulas sÃ£o muito longas?",
-        a: "A nossa metodologia Ã© prÃ¡tica, sem enrolaÃ§Ã£o! Ã‰ a forma como gostamos de ensinar. Com demonstraÃ§Ãµes reais de ferramentas e workflows aplicÃ¡veis no dia a dia. As aulas sÃ£o objetivas, pensadas para facilitar o aprendizado, sem ficar cansativo.",
+        q: "O conteúdo é focado em teoria ou prática? As aulas são muito longas?",
+        a: "A nossa metodologia é prática, sem enrolação! É a forma como gostamos de ensinar. Com demonstrações reais de ferramentas e workflows aplicáveis no dia a dia. As aulas são objetivas, pensadas para facilitar o aprendizado, sem ficar cansativo.",
         visible: !0
     }, {
-        q: "A Human Academy oferece desafios ou atividades prÃ¡ticas?",
-        a: "Sim! Frequentemente promovemos desafios criativos para incentivar a prÃ¡tica e o desenvolvimento dos alunos.",
+        q: "A NurseHub oferece desafios ou atividades práticas?",
+        a: "Sim! Frequentemente promovemos desafios práticos para incentivar a prática e o desenvolvimento dos alunos.",
         visible: !1
     }, {
         q: "Posso refazer um curso depois de concluir?",
-        a: "Yep! Enquanto seu acesso estiver ativo, vocÃª pode revisar o conteÃºdo sempre que quiser.",
+        a: "Yep! Enquanto seu acesso estiver ativo, você pode revisar o conteúdo sempre que quiser.",
         visible: !1
     }, {
-        q: "Em quanto tempo consigo comeÃ§ar a aplicar o que aprendo?",
-        a: "Desde as primeiras aulas jÃ¡ Ã© possÃ­vel aplicar conceitos e ferramentas no seu dia a dia, principalmente em produtividade e criaÃ§Ã£o.",
+        q: "Em quanto tempo consigo começar a aplicar o que aprendo?",
+        a: "Desde as primeiras aulas já é possível aplicar conceitos e ferramentas no seu dia a dia, principalmente em produtividade e criação.",
         visible: !1
     }, {
-        q: "Existe algum requisito mÃ­nimo de computador?",
-        a: "Para aplicar os nossos workflows vocÃª sÃ³ precisa de uma boa conexÃ£o Ã  internet, nÃ£o necessita de um computador potente.",
+        q: "Existe algum requisito mínimo de computador?",
+        a: "Para aplicar os nossos workflows você só precisa de uma boa conexão   internet, não necessita de um computador potente.",
         visible: !1
     }, {
-        q: "Vale a pena para quem jÃ¡ trabalha com marketing/design/audiovisual?",
-        a: "Com certeza! Profissionais dessas Ã¡reas conseguem acelerar processos, ganhar produtividade e ampliar possibilidades criativas com IA.",
+        q: "Vale a pena para quem já trabalha com marketing/design/audiovisual?",
+        a: "Com certeza! Profissionais dessas áreas conseguem acelerar processos, ganhar produtividade e ampliar possibilidades criativas com IA.",
         visible: !1
     }, {
-        q: "O que diferencia a Human Academy de outros cursos de IA?",
-        a: "Nosso foco Ã© aplicaÃ§Ã£o prÃ¡tica, workflow validado no nosso estÃºdio, comunidade ativa e atualizaÃ§Ã£o constante. NÃ£o ensinamos sÃ³ ferramenta, ensinamos como usar de forma estratÃ©gica e profissional no dia a dia.",
+        q: "O que diferencia a NurseHub de outros cursos de IA?",
+        a: "Nosso foco é aplicação prática, workflow validado no nosso estúdio, comunidade ativa e atualização constante. Não ensinamos só ferramenta, ensinamos como usar de forma estratégica e profissional no dia a dia.",
         visible: !1
     }, {
         q: "Tenho pouco tempo. Os cursos valem a pena para mim?",
-        a: "Sim! As aulas sÃ£o objetivas e prÃ¡ticas. Mesmo dedicando poucas horas por semana, vocÃª jÃ¡ consegue aplicar o que aprende no seu dia a dia.",
+        a: "Sim! As aulas são objetivas e práticas. Mesmo dedicando poucas horas por semana, você já consegue aplicar o que aprende no seu dia a dia.",
         visible: !1
     }, {
-        q: "O acesso anual Ã© suficiente?",
-        a: "Sim! Em 1 ano vocÃª consegue assistir todo o conteÃºdo, revisar, aplicar e ainda aproveitar as atualizaÃ§Ãµes incluÃ­das no perÃ­odo.",
+        q: "O acesso anual é suficiente?",
+        a: "Sim! Em 1 ano você consegue assistir todo o conteúdo, revisar, aplicar e ainda aproveitar as atualizações incluídas no período.",
         visible: !1
     }, {
-        q: "Os cursos estÃ£o Ã  venda separadamente?",
-        a: "Os nossos cursos fazem parte de uma trilha integrada. Por isso, a gente oferece o Academy Pass como uma experiÃªncia completa.",
+        q: "Os cursos estão   venda separadamente?",
+        a: "Os nossos cursos fazem parte de uma trilha integrada. Por isso, a gente oferece o NurseHub Pass como uma experiência completa.",
         visible: !1
     }],
     ye = () => {
@@ -532,7 +532,7 @@ var je = [{
                     className: "flex flex-col items-center mb-10",
                     children: [(0, y.jsx)("img", {
                         src: "/assets/pass.svg",
-                        alt: "Human Pass",
+                        alt: "NurseHub Pass",
                         className: "h-6 md:h-7 w-auto opacity-90 mb-5 md:mb-6",
                         style: {
                             filter: "brightness(0)"

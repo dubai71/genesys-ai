@@ -30,7 +30,7 @@ var l = e(a(), 1),
     }) => {
         const t = i(0),
             a = s(t, e => Math.round(e)),
-            [r, o] = (0, l.useState)("0");
+            [r, o] = (0, l.useState)("5000");
         return (0, l.useEffect)(() => a.on("change", e => {
             o(e.toLocaleString("pt-BR"))
         }), [a]), (0, l.useEffect)(() => {
@@ -162,7 +162,7 @@ var l = e(a(), 1),
                                     className: "inline-flex items-center rounded-full border border-white/60 px-4 py-1.5 mb-10 md:mb-14",
                                     children: (0, d.jsx)("span", {
                                         className: "font-body text-[12px] md:text-[13px] tracking-[-0.005em]",
-                                        children: "Human Academy"
+                                        children: "NurseHub"
                                     })
                                 }), (0, d.jsx)(r.h2, {
                                     ref: e,
@@ -208,7 +208,7 @@ var l = e(a(), 1),
                                         ease: c
                                     },
                                     className: "mt-8 md:mt-10 font-display font-medium leading-[1.08] tracking-[-0.03em] text-[clamp(1.5rem,3vw,2.6rem)] max-w-[22ch] mx-auto",
-                                    children: "alunos já passaram pela Human Academy."
+                                    children: "profissionais já fazem parte do NurseHub."
                                 }), (0, d.jsx)(r.p, {
                                     initial: {
                                         opacity: 0
@@ -226,7 +226,7 @@ var l = e(a(), 1),
                                         ease: c
                                     },
                                     className: "mt-5 md:mt-7 font-body max-w-[52ch] mx-auto text-base md:text-lg leading-[1.55]",
-                                    children: "Uma comunidade de criativos, designers, devs e empreendedores que já estão usando IA para criar coisas incríveis."
+                                    children: "Uma comunidade de profissionais de enfermagem que já estão usando IA para transformar a prática clínica e construir novas oportunidades."
                                 }), (0, d.jsx)("div", {
                                     className: "mt-14 md:mt-20 pt-10 md:pt-12 border-t border-white/50 grid grid-cols-3 gap-4 md:gap-10 max-w-[820px] mx-auto tabular-nums",
                                     children: m.map((e, t) => (0, d.jsxs)(r.div, {

@@ -5,14 +5,9 @@ export const runtime = 'edge';
 
 export async function GET(req: Request): Promise<Response> {
   try {
-    const { inputMessage, model, apiKey } = (await req.json()) as ChatBody;
+    const { inputMessage, model } = (await req.json()) as ChatBody;
 
-    let apiKeyFinal;
-    if (apiKey) {
-      apiKeyFinal = apiKey;
-    } else {
-      apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
-    }
+    const apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
     const stream = await OpenAIStream(inputMessage, model, apiKeyFinal);
 
@@ -24,14 +19,9 @@ export async function GET(req: Request): Promise<Response> {
 }
 export async function POST(req: Request): Promise<Response> {
   try {
-    const { inputMessage, model, apiKey } = (await req.json()) as ChatBody;
+    const { inputMessage, model } = (await req.json()) as ChatBody;
 
-    let apiKeyFinal;
-    if (apiKey) {
-      apiKeyFinal = apiKey;
-    } else {
-      apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
-    }
+    const apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
     const stream = await OpenAIStream(inputMessage, model, apiKeyFinal);
 

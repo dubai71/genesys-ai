@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NurseLab Seed Data</title>
+</head>
+<body>
+<script>
+const competitors = [
+  {id:"1",handle:"@enfermagemcom.ia",nicho:"Saude Digital",cor:"#FF5404",seg:"12K",eng:"4.2%",freq:3,trend:"up"},
+  {id:"2",handle:"@enfermagemdigital",nicho:"Enfermagem",cor:"#00D4FF",seg:"8.5K",eng:"3.8%",freq:2,trend:"stable"},
+  {id:"3",handle:"@tecnicoenfermagem",nicho:"Tecnico",cor:"#7C3AED",seg:"5.2K",eng:"5.1%",freq:1,trend:"up"}
+];
+const viralPosts = [
+  {id:"vp1",competitorId:"1",competitorHandle:"@enfermagemcom.ia",title:"5 erros fatais na administracao de medicamentos",format:"carousel",likes:3200,comments:145,saves:890,date:"2026-05-15",notes:"educativo carrossel passo-a-passo",createdAt:"2026-05-15"},
+  {id:"vp2",competitorId:"1",competitorHandle:"@enfermagemcom.ia",title:"Automacao na triagem de emergencia o que mudou em 2026",format:"carousel",likes:2100,comments:89,saves:560,date:"2026-04-10",notes:"dados viral automacao",createdAt:"2026-04-10"},
+  {id:"vp3",competitorId:"2",competitorHandle:"@enfermagemdigital",title:"Como funciona a triagem automatizada por IA",format:"reel",likes:5400,comments:234,saves:1200,date:"2026-06-01",notes:"educativo reel storytelling",createdAt:"2026-06-01"},
+  {id:"vp4",competitorId:"1",competitorHandle:"@enfermagemcom.ia",title:"Protocolo de sepse completo passo a passo",format:"carousel",likes:1800,comments:112,saves:670,date:"2025-09-20",notes:"educativo protocolo passos",createdAt:"2025-09-20"},
+  {id:"vp5",competitorId:"2",competitorHandle:"@enfermagemdigital",title:"Dicas para curriculum de enfermeiro que ninguem te conta",format:"post",likes:950,comments:67,saves:230,date:"2025-10-10",notes:"curriculum emprego lista",createdAt:"2025-10-10"},
+  {id:"vp6",competitorId:"3",competitorHandle:"@tecnicoenfermagem",title:"Plantao de 12h como sobreviver sem perder a sanidade",format:"reel",likes:4200,comments:189,saves:780,date:"2026-05-20",notes:"storytelling viral plantao",createdAt:"2026-05-20"},
+  {id:"vp7",competitorId:"3",competitorHandle:"@tecnicoenfermagem",title:"Puncao venosa 5 dicas que mudam o jogo",format:"carousel",likes:2800,comments:156,saves:890,date:"2026-03-15",notes:"educativo passo-a-passo",createdAt:"2026-03-15"},
+  {id:"vp8",competitorId:"1",competitorHandle:"@enfermagemcom.ia",title:"Checklist de verificacao de medicamentos para enfermeiros",format:"carousel",likes:1500,comments:78,saves:450,date:"2025-08-05",notes:"protocolo lista",createdAt:"2025-08-05"}
+];
+try {
+  localStorage.setItem('nl_competitors', JSON.stringify(competitors));
+  localStorage.setItem('nl_viral_posts', JSON.stringify(viralPosts));
+  document.title = 'OK: ' + competitors.length + ' comps, ' + viralPosts.length + ' posts';
+  document.body.innerHTML = '<h1>OK: ' + competitors.length + ' competitors, ' + viralPosts.length + ' viral posts loaded!</h1><p>Redirecting in 2s...</p><script>setTimeout(function(){ window.location.href = 'http://localhost:3001/'; }, 2000);<\/script>';
+} catch(e) {
+  document.title = 'ERROR';
+  document.body.innerHTML = '<h1>Error: ' + e.message + '</h1>';
+}
+</script>
+</body>
+</html>

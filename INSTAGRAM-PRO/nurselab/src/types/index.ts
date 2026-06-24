@@ -217,11 +217,211 @@ export interface VideoGeneration {
   model: VideoModel
   duration: number
   aspectRatio: string
-  status: 'pending' | 'processing' | 'done' | 'error'
   jobId?: string
+  status: 'pending' | 'processing' | 'done' | 'error'
   videoUrl?: string
   imageUrl?: string
   error?: string
   profileId?: string
+  createdAt: string
+}
+
+// ─── DNA STUDIO TYPES ─────────────────────────────────────────────────────────────────
+
+export type DNAStylePreset = 
+  | 'twitter-vibe' 
+  | 'windows-editorial' 
+  | 'minimal-health' 
+  | 'bold-medical' 
+  | 'tech-dark' 
+  | 'warm-editorial'
+  | 'viral-carousel'
+  | 'thread-style'
+  | 'custom'
+
+export type ArtifactType = 
+  | 'social-post' 
+  | 'carousel' 
+  | 'landing-page' 
+  | 'ui-component' 
+  | 'brand-identity'
+  | 'pitch-deck'
+  | 'email-marketing'
+  | 'ad-creative'
+  | 'other'
+
+export type ReconstructionGranularity = 'pixel-perfect' | 'medium' | 'low'
+export type BrandApplication = 'raw-extraction' | 'brand-adaptation'
+
+export interface DNATextElement {
+  id: string
+  type: 'text' | 'shape' | 'icon' | 'image'
+  styleRef?: string
+  content: string
+  maxChars?: number
+  role: string
+}
+
+export interface DNAColor {
+  hex: string
+  rgb: [number, number, number]
+  hsl: [number, number, number]
+  role: 'primary' | 'secondary' | 'accent' | 'surface' | 'neutral' | 'functional'
+  isGradient?: boolean
+  gradientStops?: { position: number; hex: string }[]
+}
+
+export interface DNATypography {
+  family: string
+  weights: number[]
+  role: 'display' | 'body' | 'mono' | 'accent'
+}
+
+export interface DNATextStyle {
+  id: string
+  family: string
+  weight: number
+  sizePx: number
+  lineHeight: number
+  letterSpacingEm: number
+  transform: 'none' | 'uppercase' | 'lowercase' | 'capitalize'
+  color: string
+  align: 'start' | 'center' | 'end'
+}
+
+export interface DNALayoutBlock {
+  id: string
+  type: 'container' | 'text' | 'shape' | 'asset'
+  position: { x: number; y: number; w: number; h: number }
+  padding: [number, number, number, number]
+  alignment: 'start' | 'center' | 'end' | 'stretch'
+  children: string[]
+}
+
+export interface DNAVisualEffect {
+  type: 'shadow' | 'blur' | 'glow' | 'opacity' | 'blend-mode'
+  params: Record<string, number | string>
+}
+
+export interface VisualDNA {
+  id: string
+  name: string
+  thumbnail?: string
+  sourceImage?: string // base64 original image
+  version: string
+  extractedFrom: string
+  artifactType: ArtifactType
+  reconstructionTarget: 'chatgpt_image_2'
+
+  // 10-layer analysis
+  canvas: {
+    width: number
+    height: number
+    aspectRatio: string
+    background: { type: 'solid' | 'gradient' | 'image'; value: string }
+    grid: { columns: number; gutter: number; margin: number }
+  }
+  colorSystem: {
+    primary: DNAColor
+    secondary: DNAColor[]
+    neutrals: DNAColor[]
+    gradients: { hex: string; stops: { position: number; hex: string }[] }[]
+  }
+  typography: {
+    fontStack: DNATypography[]
+    textStyles: DNATextStyle[]
+  }
+  layout: {
+    structure: 'flex' | 'grid' | 'absolute'
+    blocks: DNALayoutBlock[]
+  }
+  elements: DNATextElement[]
+  effects: {
+    shadows: DNAVisualEffect[]
+    blurs: DNAVisualEffect[]
+    glows: DNAVisualEffect[]
+  }
+  artDirection: {
+    styleTags: string[]
+    mood: string
+    era: string
+    confidence: 'high' | 'medium' | 'low'
+  }
+  reconstructionRules: {
+    fixedElements: string[]
+    constraints: string[]
+  }
+  chatgptImagePrompt: string
+  profileId?: string
+  createdAt: string
+}
+
+export interface PromptVariable {
+  id: string
+  name: string
+  label: string
+  type: 'text' | 'select' | 'color' | 'number'
+  defaultValue?: string
+  options?: string[] // for select type
+  required: boolean
+}
+
+export interface PromptTemplate {
+  id: string
+  name: string
+  description: string
+  category: 'carrossel' | 'post' | 'ads' | 'tweet' | 'story' | 'reel' | 'thread' | 'generic'
+  stylePreset: DNAStylePreset
+
+  // Prompt structure
+  promptTemplate: string // with {{variable}} placeholders
+  systemPrompt?: string // extra instructions for the model
+
+  // ── Multi-prompt support ──
+  // Pre-defined prompts array (each item = one slide/step)
+  // When set, overrides promptTemplate in bulk generation
+  prompts?: string[] // array of fully-written prompts (no variables needed)
+
+  // Visual DNA association
+  visualDNAId?: string
+  overrideDNAPrompt?: string
+
+  // Variables definition
+  variables: PromptVariable[]
+
+  // Generation settings
+  defaultModel: string
+  defaultAspectRatio: string
+  defaultSlideCount: number // for carousel templates
+
+  // Metadata
+  tags: string[]
+  useCount: number
+  profileId?: string
+  createdAt: string
+  updatedAt: string
+}
+
+export interface AutoGenerateRequest {
+  source: 'news' | 'competitor' | 'creative' | 'manual'
+  topic?: string
+  templateId: string
+  count: number
+  modelId: string
+  aspectRatio: string
+  profileId?: string
+}
+
+export interface AutoGeneratedCreative {
+  id: string
+  requestId: string
+  topic: string
+  generatedPrompt: string
+  visualDNA?: VisualDNA
+  templateId: string
+  status: 'pending' | 'generating' | 'done' | 'error'
+  imageUrl?: string
+  thumbnailUrl?: string
+  error?: string
   createdAt: string
 }

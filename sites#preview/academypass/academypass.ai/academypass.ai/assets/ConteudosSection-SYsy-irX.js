@@ -325,7 +325,7 @@ var c = e(),
                     })
                 })]
             }), (0, c.jsx)(n, {
-                label: "Quero fazer parte",
+                label: "Tornar-se um membro fundador",
                 className: "mt-12 md:mt-16"
             })]
         })

@@ -24,27 +24,27 @@ var c = e(t(), 1),
     p = [{
         id: "1",
         icon: "",
-        label: "CURSOS",
+        label: "TRILHAS",
         title: "Cursos e Aulas",
-        desc: "Curadoria e prÃ¡tica. O que funciona no mundo real. Cada curso tem um recorte claro â€” sem enrolaÃ§Ã£o, sem mÃ³dulo de preenchimento.",
+        desc: "Curadoria e prática. O que funciona no mundo real. Cada curso tem um recorte claro â€” sem enrolação, sem módulo de preenchimento.",
         cta: "Conhecer cursos",
         ctaLink: "/cursos",
-        tags: ["Recorte claro", "PrÃ¡tica aplicada", "Atualizado"]
+        tags: ["Recorte claro", "Prática aplicada", "Atualizado"]
     }, {
         id: "2",
         icon: "",
         label: "AURA IA",
         title: "Aura",
-        desc: "A IA da Human que monta sua trilha de aprendizado no ritmo certo.",
+        desc: "A IA do NurseHub que monta sua trilha de aprendizado no ritmo certo.",
         cta: "Ver a Aura",
         ctaLink: "/aura",
-        tags: ["Contextual", "Plano de estudo", "RevisÃ£o"]
+        tags: ["Contextual", "Plano de estudo", "Revisão"]
     }, {
         id: "3",
         icon: "",
         label: "LABS",
-        title: "Labs de CriaÃ§Ã£o",
-        desc: "Templates, geradores, checklists e workflows. Ferramentas pra criar mais rÃ¡pido sem perder qualidade.",
+        title: "Labs de Criação",
+        desc: "Templates, geradores, checklists e workflows. Ferramentas pra criar mais rápido sem perder qualidade.",
         cta: "Explorar labs",
         ctaLink: "/labs",
         tags: ["Templates", "Geradores", "Workflows"]
@@ -53,31 +53,31 @@ var c = e(t(), 1),
         icon: "",
         label: "BIBLIOTECA",
         title: "Biblioteca",
-        desc: "ReferÃªncias e prompts com contexto e aplicaÃ§Ã£o. Cards organizados por estilo, formato e objetivo.",
+        desc: "Referências e prompts com contexto e aplicação. Cards organizados por estilo, formato e objetivo.",
         cta: "Ver biblioteca",
         ctaLink: "/biblioteca",
-        tags: ["ReferÃªncias", "Prompts", "Por estilo"]
+        tags: ["Referências", "Prompts", "Por estilo"]
     }, {
         id: "5",
         icon: "",
         label: "COMUNIDADE",
         title: "Comunidade",
-        desc: "Pergunta boa, resposta boa. Suporte e troca de processo entre criativos que estÃ£o construindo com IA no dia a dia.",
+        desc: "Pergunta boa, resposta boa. Suporte e troca entre profissionais que estão construindo com IA no dia a dia.",
         cta: "Conhecer a comunidade",
         ctaLink: "/comunidade",
-        tags: ["+13.000 criativos", "Troca real", "Suporte"]
+        tags: ["+13.000 profissionais", "Troca real", "Suporte"]
     }, {
         id: "6",
         icon: "",
         label: "WORKFLOWS",
         title: "Workflows",
-        desc: "Uma nova forma de aprender. Passo a passo guiado, prÃ¡tico e direto ao ponto. Cada workflow Ã© uma entrega real.",
+        desc: "Uma nova forma de aprender. Passo a passo guiado, prático e direto ao ponto. Cada workflow é uma entrega real.",
         cta: "Ver Workflows",
         ctaLink: "/workflows",
-        tags: ["Passo a passo", "PrÃ¡tico", "New"]
+        tags: ["Passo a passo", "Prático", "New"]
     }],
     h = {
-        CURSOS: "/cursos",
+        TRILHAS: "/cursos",
         "AURA IA": "/aura",
         LABS: "/labs",
         BIBLIOTECA: "/biblioteca",
@@ -289,7 +289,7 @@ var c = e(t(), 1),
                                 onClick: () => w(1),
                                 disabled: g === a.length - 1,
                                 className: "w-10 h-10 rounded-full border border-foreground/15 flex items-center justify-center text-foreground/80 disabled:opacity-30 active:scale-95 transition-transform duration-150",
-                                "aria-label": "PrÃ³ximo",
+                                "aria-label": "Próximo",
                                 children: (0, u.jsx)(i, {
                                     className: "w-4 h-4"
                                 })

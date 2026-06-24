@@ -4,22 +4,22 @@ import {
   HiOutlineHome,
   HiOutlineCpuChip,
   HiOutlineUsers,
-  HiOutlineUser,
   HiOutlineCog8Tooth,
   HiOutlineCreditCard,
   HiOutlineDocumentText,
-  HiOutlineCurrencyDollar
+  HiOutlineShieldCheck,
+  HiOutlineUser
 } from 'react-icons/hi2';
 
 export const routes: IRoute[] = [
   {
-    name: 'Main Dashboard',
+    name: 'Painel',
     path: '/dashboard/main',
     icon: <HiOutlineHome className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />,
     collapse: false
   },
   {
-    name: 'AI Chat',
+    name: 'IA Chat',
     path: '/dashboard/ai-chat',
     icon: (
       <HiOutlineCpuChip className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />
@@ -27,7 +27,15 @@ export const routes: IRoute[] = [
     collapse: false
   },
   {
-    name: 'Profile Settings',
+    name: 'Admin',
+    path: '/dashboard/admin',
+    icon: (
+      <HiOutlineShieldCheck className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />
+    ),
+    collapse: false
+  },
+  {
+    name: 'Configurações',
     path: '/dashboard/settings',
     icon: (
       <HiOutlineCog8Tooth className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />
@@ -35,7 +43,7 @@ export const routes: IRoute[] = [
     collapse: false
   },
   {
-    name: 'AI Generator',
+    name: 'IA Generator',
     path: '/dashboard/ai-generator',
     icon: (
       <HiOutlineDocumentText className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />
@@ -44,46 +52,26 @@ export const routes: IRoute[] = [
     disabled: true
   },
   {
-    name: 'AI Assistant',
+    name: 'IA Assistant',
     path: '/dashboard/ai-assistant',
     icon: <HiOutlineUser className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />,
     collapse: false,
     disabled: true
   },
   {
-    name: 'Users List',
+    name: 'Usuários',
     path: '/dashboard/users-list',
     icon: (
       <HiOutlineUsers className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />
     ),
-    collapse: false,
-    disabled: true
+    collapse: false
   },
   {
-    name: 'Subscription',
+    name: 'Assinaturas',
     path: '/dashboard/subscription',
     icon: (
       <HiOutlineCreditCard className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />
     ),
-    collapse: false,
-    disabled: true
-  },
-  {
-    name: 'Landing Page',
-    path: '/home',
-    icon: (
-      <HiOutlineDocumentText className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />
-    ),
-    collapse: false,
-    disabled: true
-  },
-  {
-    name: 'Pricing Page',
-    path: '/pricing',
-    icon: (
-      <HiOutlineCurrencyDollar className="-mt-[7px] h-4 w-4 stroke-2 text-inherit" />
-    ),
-    collapse: false,
-    disabled: true
+    collapse: false
   }
 ];

@@ -52,7 +52,7 @@ var d = e(o(), 1),
     }, {
         name: "ImageFX",
         icon: "🖌️",
-        desc: "Geração de imagens do Google com controles criativos."
+        desc: "Geração de imagens do Google com controles avançados."
     }, {
         name: "Whisk",
         icon: "🌀",

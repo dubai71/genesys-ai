@@ -9,12 +9,20 @@ type Price = Database['public']['Tables']['prices']['Row'];
 
 // Note: supabaseAdmin uses the SERVICE_ROLE_KEY which you must only use in a secure server-side context
 // as it has admin privileges and overwrites RLS policies!
-const supabaseAdmin = createClient<Database>(
-  process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-  process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-);
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
+
+if (typeof window === 'undefined' && (!supabaseUrl || !supabaseServiceKey)) {
+  // Prevent build crash when env vars are missing
+  console.warn('Missing SUPABASE_SERVICE_ROLE_KEY. Supabase admin features will be disabled.');
+}
+
+const supabaseAdmin = supabaseUrl && supabaseServiceKey
+  ? createClient<Database>(supabaseUrl, supabaseServiceKey)
+  : null;
 
 const upsertProductRecord = async (product: Stripe.Product) => {
+  if (!supabaseAdmin) throw new Error('Supabase admin not initialized');
   const productData: Product = {
     id: product.id,
     active: product.active,

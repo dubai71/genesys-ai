@@ -15040,7 +15040,7 @@ function Sa(e, t, n, r, o) {
         let t = e.querySelectorAll(Xi ? "span:not([class]):not([style])" : "span.Apple-converted-space");
         for (let n = 0; n < t.length; n++) {
             let r = t[n];
-            1 == r.childNodes.length && "Â " == r.textContent && r.parentNode && r.parentNode.replaceChild(e.ownerDocument.createTextNode(" "), r)
+            1 == r.childNodes.length && " " == r.textContent && r.parentNode && r.parentNode.replaceChild(e.ownerDocument.createTextNode(" "), r)
         }
     }(i);
     let c = i && i.querySelector("[data-pm-slice]"),
@@ -16398,7 +16398,7 @@ function Fl(e, t, n, r, o) {
             endB: u.to
         }
     }
-    e.state.selection.from < e.state.selection.to && p.start == p.endB && e.state.selection instanceof Io && (p.start > e.state.selection.from && p.start <= e.state.selection.from + 2 && e.state.selection.from >= d.from ? p.start = e.state.selection.from : p.endA < e.state.selection.to && p.endA >= e.state.selection.to - 2 && e.state.selection.to <= d.to && (p.endB += e.state.selection.to - p.endA, p.endA = e.state.selection.to)), Ki && Ji <= 11 && p.endB == p.start + 1 && p.endA == p.start && p.start > d.from && " Â " == d.doc.textBetween(p.start - d.from - 1, p.start - d.from + 1) && (p.start--, p.endA--, p.endB--);
+    e.state.selection.from < e.state.selection.to && p.start == p.endB && e.state.selection instanceof Io && (p.start > e.state.selection.from && p.start <= e.state.selection.from + 2 && e.state.selection.from >= d.from ? p.start = e.state.selection.from : p.endA < e.state.selection.to && p.endA >= e.state.selection.to - 2 && e.state.selection.to <= d.to && (p.endB += e.state.selection.to - p.endA, p.endA = e.state.selection.to)), Ki && Ji <= 11 && p.endB == p.start + 1 && p.endA == p.start && p.start > d.from && "  " == d.doc.textBetween(p.start - d.from - 1, p.start - d.from + 1) && (p.start--, p.endA--, p.endB--);
     let m = d.doc.resolveNoCache(p.start - d.from),
         g = d.doc.resolveNoCache(p.endB - d.from),
         y = h.resolve(p.start),

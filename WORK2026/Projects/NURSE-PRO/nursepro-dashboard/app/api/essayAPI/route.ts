@@ -10,15 +10,9 @@ export async function GET(req: Request): Promise<Response> {
       words,
       essayType,
       model,
-      apiKey
     } = (await req.json()) as EssayBody;
 
-    let apiKeyFinal;
-    if (apiKey) {
-      apiKeyFinal = apiKey;
-    } else {
-      apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
-    }
+    const apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
     const stream = await OpenAIStream(
       topic,
@@ -41,15 +35,9 @@ export async function POST(req: Request): Promise<Response> {
       words,
       essayType,
       model,
-      apiKey
     } = (await req.json()) as EssayBody;
 
-    let apiKeyFinal;
-    if (apiKey) {
-      apiKeyFinal = apiKey;
-    } else {
-      apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
-    }
+    const apiKeyFinal = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
     const stream = await OpenAIStream(
       topic,

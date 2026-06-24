@@ -26,33 +26,33 @@ var m = "/assets/phone-screen-video-DgWoGxiU.mp4",
     x = [{
         icon: t,
         title: "Workflows",
-        desc: "Uma nova forma de aprender. Passo a passo guiado e prático.",
+        desc: "Trilhas de aprendizado personalizadas para sua carreira na enfermagem.",
         badge: "new"
     }, {
         icon: i,
         title: "Aprender",
-        desc: "Cursos com recorte bom. Uma ideia por frame."
+        desc: "Cursos com curadoria. Uma competência por módulo."
     }, {
         icon: n,
         title: "Comunidade",
-        desc: "+13.000 criativos construindo com IA no dia a dia."
+        desc: "Profissionais de enfermagem construindo com IA no dia a dia."
     }, {
         icon: r,
         title: "Criar",
-        desc: "Labs, templates e ferramentas pra sair da ideia e ir pra entrega."
+        desc: "Ferramentas, templates e automações pra sair da burocracia e ir pro cuidado."
     }, {
         icon: null,
         title: "Aura",
-        desc: "A IA da Human que monta sua trilha de aprendizado no ritmo certo.",
+        desc: "A IA do NurseHub que monta sua trilha de aprendizado no ritmo certo.",
         customIcon: !0
     }, {
         icon: l,
         title: "Biblioteca",
-        desc: "Referências e prompts com contexto real."
+        desc: "Referências clínicas e prompts com contexto real."
     }, {
         icon: s,
         title: "Mentorias",
-        desc: "Sessões ao vivo com profissionais do mercado criativo."
+        desc: "Sessões ao vivo com especialistas em enfermagem e tecnologia."
     }],
     h = [{
         side: "right",
@@ -260,7 +260,7 @@ var m = "/assets/phone-screen-video-DgWoGxiU.mp4",
                             backdropFilter: "blur(16px)",
                             border: "1px solid rgba(255,255,255,0.08)"
                         },
-                        children: "Academy Pass"
+                        children: "NurseHub Pass"
                     })
                 })]
             }), (0, p.jsx)("div", {
@@ -336,7 +336,7 @@ var m = "/assets/phone-screen-video-DgWoGxiU.mp4",
                     }, `${a}-${e}`))
                 }, a))
             }), (0, p.jsx)(c, {
-                label: "Quero fazer parte",
+                label: "Tornar-se um membro fundador",
                 className: "mt-12 md:mt-16"
             })]
         })]

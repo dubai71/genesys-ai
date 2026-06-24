@@ -33,7 +33,7 @@ var r = e(s(), 1),
         points: 3500
     }, {
         lv: 7,
-        title: "AvanÃ§ado",
+        title: "Avançado",
         color: "150, 60%, 45%",
         points: 7e3
     }, {
@@ -48,7 +48,7 @@ var r = e(s(), 1),
         points: 2e4
     }, {
         lv: 20,
-        title: "LendÃ¡rio",
+        title: "Lendário",
         color: "280, 60%, 60%",
         points: 35e3
     }],
@@ -141,13 +141,13 @@ var r = e(s(), 1),
                     className: "mb-10 md:mb-14 text-center",
                     children: [(0, c.jsx)("span", {
                         className: "text-[10px] text-primary font-body tracking-[0.25em] uppercase mb-4 block",
-                        children: "GamificaÃ§Ã£o"
+                        children: "Gamificação"
                     }), (0, c.jsx)("h2", {
                         className: "font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-[0.9] mb-5",
                         children: "Journey"
                     }), (0, c.jsx)("p", {
                         className: "text-white/35 font-body max-w-lg text-sm leading-relaxed mx-auto",
-                        children: "ConsistÃªncia nÃ£o Ã© motivaÃ§Ã£o â€” Ã© sistema. Pontos, nÃ­veis e badges pra vocÃª enxergar progresso e manter ritmo. Cada curso, lab e entrega alimenta seu perfil."
+                        children: "Consistência não é motivação â€” é sistema. Pontos, níveis e badges pra você enxergar progresso e manter ritmo. Cada curso, lab e entrega alimenta seu perfil."
                     })]
                 }), (0, c.jsxs)(o.div, {
                     initial: {
@@ -277,7 +277,7 @@ var r = e(s(), 1),
                         children: [{
                             label: "Certificados"
                         }, {
-                            label: "ConteÃºdo secreto"
+                            label: "Conteúdo secreto"
                         }, {
                             label: "Badges"
                         }, {

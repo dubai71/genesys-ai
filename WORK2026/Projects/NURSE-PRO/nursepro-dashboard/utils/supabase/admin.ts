@@ -43,7 +43,6 @@ const upsertPriceRecord = async (
   const priceData: Price = {
     id: price.id,
     description: '',
-    metadata: { shit: true },
     product_id: typeof price.product === 'string' ? price.product : '',
     active: price.active,
     currency: price.currency,

@@ -53093,15 +53093,15 @@ var bB = (e, t) => "undefined" != typeof window && "function" == typeof window.f
                     className: "relative z-10 w-full px-5 md:px-10 max-w-[960px] mx-auto text-center pt-28 pb-28 md:pt-32 md:pb-32",
                     children: [(0, bt.jsxs)("h1", {
                         className: "hero-anim hero-anim-1 font-display font-medium text-white leading-[0.95] tracking-[-0.035em] text-[clamp(3.15rem,10.4vw,7.25rem)] md:text-[clamp(2.5rem,6.5vw,5.8rem)] mx-auto",
-                        children: ["A enfermagem ainda trabalha como ", (0, bt.jsx)("br", {
-                                                    className: "hidden sm:inline"
-                                                }), "se fosse 2010.", (0, bt.jsx)("span", {
-                                                    className: "text-primary",
-                                                    children: ""
-                                                })]
+                        children: ["A enfermagem ainda trabalha ", (0, bt.jsx)("br", {
+                            className: "hidden sm:inline"
+                        }), "de criação com IA", (0, bt.jsx)("span", {
+                            className: "text-primary",
+                            children: "."
+                        })]
                     }), (0, bt.jsx)("p", {
                         className: "hero-anim hero-anim-2 mt-5 md:mt-8 max-w-[44ch] mx-auto font-body text-white/75 text-[17px] md:text-lg leading-[1.45]",
-                        children: "Enquanto outras profissões automatizam processos e constroem novas oportunidades, milhares de profissionais da enfermagem continuam presos à burocracia, sobrecarga e dependência exclusiva do plantão. O NurseHub® nasceu para mudar isso. A comunidade da Nova Enfermagem Digital."
+                        children: "Enquanto outras profissões automatizam processos e constroem novas oportunidades, milhares de profissionais da enfermagem continuam presos à burocracia, sobrecarga e dependência exclusiva do plantão. O NurseHub nasceu para mudar isso. A comunidade da Nova Enfermagem Digital. O NurseHub utiliza inteligência artificial."
                     }), (0, bt.jsxs)("div", {
                         className: "hero-anim hero-anim-3 mt-7 md:mt-11 flex flex-row gap-2 sm:gap-3.5 items-center justify-center",
                         children: [(0, bt.jsxs)("button", {

@@ -117,6 +117,19 @@ export const storage = {
   deleteCreative:      (id: string)          => storage.setCreatives(storage.getCreatives().filter(c => c.id !== id)),
   getCreativesByType:  (type: string)       => storage.getCreatives().filter(c => c.type === type),
   getCreativesBySaveMode: (mode: string)    => storage.getCreatives().filter(c => c.savedAs === mode),
+
+  // Visual DNA
+  getDNA:            ()                     => get<VisualDNA[]>('nl_dna', []),
+  setDNA:            (v: VisualDNA[])       => set('nl_dna', v),
+  addDNA:            (d: VisualDNA)         => storage.setDNA([d, ...storage.getDNA()]),
+  deleteDNA:         (id: string)           => storage.setDNA(storage.getDNA().filter(d => d.id !== id)),
+
+  // Prompt Templates
+  getPromptTemplates: ()                     => get<PromptTemplate[]>('nl_prompt_templates', []),
+  setPromptTemplates: (v: PromptTemplate[])  => set('nl_prompt_templates', v),
+  addPromptTemplate:  (t: PromptTemplate)    => storage.setPromptTemplates([t, ...storage.getPromptTemplates()]),
+  updatePromptTemplate:(t: PromptTemplate)   => storage.setPromptTemplates(storage.getPromptTemplates().map(x => x.id === t.id ? t : x)),
+  deletePromptTemplate:(id: string)          => storage.setPromptTemplates(storage.getPromptTemplates().filter(t => t.id !== id)),
 }
 
 export const SAMPLE_POSTS: Post[] = [

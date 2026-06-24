@@ -341,7 +341,7 @@ var V = ({
                             })]
                         }), (0, k.jsx)("p", {
                             className: "text-muted-foreground font-body max-w-md text-sm",
-                            children: "Os cursos mais bem avaliados do mercado criativo. NPS acima de 90 em todas as turmas."
+                            children: "Os cursos mais bem avaliados da enfermagem digital. NPS acima de 90 em todas as turmas."
                         })]
                     }), (0, k.jsx)("div", {
                         className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6",

@@ -33,11 +33,11 @@ var p = e(a(), 1),
         link: "https://humanupdate.substack.com",
         pubDate: ""
     }, {
-        title: "Ferramenta nova: IA que edita vÃ­deo sozinha",
+        title: "Ferramenta nova: IA que edita vídeo sozinha",
         link: "https://humanupdate.substack.com",
         pubDate: ""
     }, {
-        title: "ðŸ“Š TendÃªncia: agentes autÃ´nomos em 2026",
+        title: "ðŸ“Š Tendência: agentes aut´nomos em 2026",
         link: "https://humanupdate.substack.com",
         pubDate: ""
     }],
@@ -102,10 +102,10 @@ var p = e(a(), 1),
                             })
                         }), (0, u.jsx)("p", {
                             className: "text-white/40 font-body text-sm leading-relaxed mb-8 max-w-md",
-                            children: "A atualizaÃ§Ã£o que nÃ£o te faz perder tempo. Todo update de IA que importa, curado e direto no seu email. Sem spam, sem hype vazio."
+                            children: "A atualização que não te faz perder tempo. Todo update de IA que importa, curado e direto no seu email. Sem spam, sem hype vazio."
                         }), (0, u.jsx)("div", {
                             className: "flex flex-wrap gap-3 mb-10",
-                            children: ["Curadoria semanal", "Ferramentas novas", "Prompts exclusivos", "TendÃªncias de IA"].map(e => (0, u.jsxs)("span", {
+                            children: ["Curadoria semanal", "Ferramentas novas", "Prompts exclusivos", "Tendências de IA"].map(e => (0, u.jsxs)("span", {
                                 className: "inline-flex items-center gap-1.5 px-3 py-1.5 text-[10px] font-body text-white/50 bg-white/[0.04] border border-white/[0.08] rounded-full tracking-wide",
                                 children: [(0, u.jsx)(d, {
                                     className: "w-3 h-3",
@@ -147,12 +147,12 @@ var p = e(a(), 1),
                             })]
                         }), (0, u.jsxs)("p", {
                             className: "text-[10px] text-white/20 font-body mt-3",
-                            children: ["+48k criativos jÃ¡ recebem Â· Cancele quando quiser Â·", " ", (0, u.jsx)("a", {
+                            children: ["+48k profissionais já recebem · Cancele quando quiser ·", " ", (0, u.jsx)("a", {
                                 href: "https://humanupdate.substack.com",
                                 target: "_blank",
                                 rel: "noopener noreferrer",
                                 className: "text-primary/40 hover:text-primary/60 transition-colors underline underline-offset-2",
-                                children: "Ver ediÃ§Ãµes anteriores"
+                                children: "Ver edições anteriores"
                             })]
                         })]
                     }), (0, u.jsx)(s.div, {
@@ -213,7 +213,7 @@ var p = e(a(), 1),
                                                     children: "Human Update"
                                                 }), (0, u.jsx)("p", {
                                                     className: "text-[9px] font-body text-white/30",
-                                                    children: a ? `Ãšltima ediÃ§Ã£o Â· ${a}` : "EdiÃ§Ã£o mais recente"
+                                                    children: a ? `šltima edição · ${a}` : "Edição mais recente"
                                                 })]
                                             })]
                                         }), (0, u.jsx)(r, {

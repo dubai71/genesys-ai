@@ -9,6 +9,7 @@ const NAV_TOP = [
   { id: 'calendario',  icon: '📅', label: 'Calendário' },
   { id: 'conteudo',    icon: '✨', label: 'Criar Conteúdo' },
   { id: 'generatorlab', icon: '⚡', label: 'GeneratorLab' },
+  { id: 'dnastudio',   icon: '🧬', label: 'DNA Studio' },
   { id: 'biblioteca',  icon: '📚', label: 'Biblioteca' },
   { id: 'concorrentes',icon: '🔍', label: 'Concorrentes' },
   { id: 'noticias',    icon: '📰', label: 'Notícias' },
