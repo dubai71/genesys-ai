@@ -15,6 +15,7 @@ package = "@netlify/plugin-nextjs"
 publish = "C:\\AI\\genesys\\INSTAGRAM-PRO\\nurselab\\.next"
 publishOrigin = "config"
 commandOrigin = "config"
+base = "C:\\AI\\genesys\\INSTAGRAM-PRO\\nurselab"
 command = "npm run build"
 
 [build.environment]

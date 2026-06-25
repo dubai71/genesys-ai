@@ -1431,7 +1431,14 @@ export default function DnaStudio() {
                             className="px-2 py-1 text-[9px] bg-white/[0.06] text-[rgba(237,218,186,0.5)] rounded hover:text-[#EDDABA]">
                             📋
                           </button>
-                          <button onClick={() => sendToGeneratorDirect(sug.generatedPrompt, sug.templateId)}
+                          <button onClick={() => {
+                            if (typeof window !== 'undefined') {
+                              sessionStorage.setItem('nl_dna_prompt', sug.generatedPrompt)
+                              sessionStorage.setItem('nl_dna_model', selectedTemplate?.defaultModel || 'flux-1-dev')
+                              sessionStorage.setItem('nl_dna_aspect', sug.aspectRatio || '1:1')
+                              setStatusMessage('⚡ Prompt enviado para o gerador!')
+                            }
+                          }}
                             className="px-2 py-1 text-[9px] bg-[#FF5404] text-white rounded hover:bg-[#E04A00]">
                             ⚡
                           </button>

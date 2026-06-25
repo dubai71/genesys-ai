@@ -1,7 +1,7 @@
 import type {
   Post, Competitor, GeneratedContent, BusinessProfile,
   AppConfig, ScheduledDay, Profile, BrandTemplate, VideoGeneration,
-  ViralPost, Creative
+  ViralPost, VisualDNA, PromptTemplate, Creative
 } from '@/types'
 
 const KEYS = {
@@ -119,10 +119,10 @@ export const storage = {
   getCreativesBySaveMode: (mode: string)    => storage.getCreatives().filter(c => c.savedAs === mode),
 
   // Visual DNA
-  getDNA:            ()                     => get<VisualDNA[]>('nl_dna', []),
-  setDNA:            (v: VisualDNA[])       => set('nl_dna', v),
-  addDNA:            (d: VisualDNA)         => storage.setDNA([d, ...storage.getDNA()]),
-  deleteDNA:         (id: string)           => storage.setDNA(storage.getDNA().filter(d => d.id !== id)),
+  getDNA: () => get<VisualDNA[]>('nl_dna', []),
+    setDNA: (v: VisualDNA[]) => set('nl_dna', v),
+    addDNA: (d: VisualDNA) => storage.setDNA([d, ...storage.getDNA()]),
+    deleteDNA: (id: string) => storage.setDNA(storage.getDNA().filter(d => d.id !== id)),
 
   // Prompt Templates
   getPromptTemplates: ()                     => get<PromptTemplate[]>('nl_prompt_templates', []),
