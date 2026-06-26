@@ -1,8 +1,4 @@
-/*
-  NurseHub redesign override
-  Direction: generative media operating system, inspired by agent-native
-  creative pipelines and multimedia skill libraries.
-*/
+/* NurseHub redesign override */
 
 :root {
   --ap-ink: #f7f2e8;
@@ -20,7 +16,6 @@
   --background: 30 10% 4%;
   --foreground: 42 43% 94%;
   --card: 36 12% 9%;
-  --card-foreground: 42 43% 94%;
   --muted-foreground: 42 20% 68%;
   --accent: 75 100% 70%;
   --accent-foreground: 24 16% 7%;
@@ -40,6 +35,8 @@ body {
     radial-gradient(860px 560px at 12% 18%, rgba(255, 107, 53, 0.18), transparent 62%),
     linear-gradient(135deg, #080706 0%, #10100d 48%, #050807 100%);
   background-size: 48px 48px, 48px 48px, auto, auto, auto;
+  padding: 0;
+  margin: 0;
 }
 
 body:before {
@@ -63,18 +60,19 @@ body:before {
 
 section {
   position: relative;
+  background: transparent !important;
 }
 
-section[class*="bg-"],
-section[style*="hsl(222"],
-section[style*="#05080d"] {
-  background-color: transparent !important;
+section:first-of-type {
+  min-height: auto;
+  background: transparent !important;
 }
 
-h1,
-h2,
-h3,
-.font-display {
+section:not(:first-of-type) {
+  background: transparent !important;
+}
+
+h1, h2, h3, .font-display {
   letter-spacing: 0 !important;
 }
 
@@ -87,8 +85,7 @@ h2 .text-white\/40 {
   color: var(--ap-lime) !important;
 }
 
-p,
-.text-muted-foreground,
+p, .text-muted-foreground,
 [class*="text-white/55"],
 [class*="text-white/60"],
 [class*="text-white/65"],
@@ -96,13 +93,11 @@ p,
   color: var(--ap-muted) !important;
 }
 
-[class*="text-primary"],
-.text-primary {
+[class*="text-primary"], .text-primary {
   color: var(--ap-cyan) !important;
 }
 
-[class*="bg-primary"],
-.bg-primary {
+[class*="bg-primary"], .bg-primary {
   background-color: var(--ap-cyan) !important;
 }
 
@@ -119,18 +114,6 @@ p,
   display: none !important;
 }
 
-section:first-of-type {
-  min-height: auto;
-}
-
-section:first-of-type:before {
-  content: none;
-}
-
-section:first-of-type:after {
-  content: none;
-}
-
 section:first-of-type h1 {
   font-weight: 900 !important;
 }
@@ -140,51 +123,28 @@ section:first-of-type .grid {
   align-items: stretch;
 }
 
-.liquid-glass-card,
-section:first-of-type [class*="rounded-2xl"],
-section:first-of-type [class*="rounded-3xl"] {
-  border-radius: 8px !important;
+/* Restaurar cards dos CURSOS DESTAQUE — não forçar glass */
+section[id="cursos-destaque"] [class*="rounded-2xl"],
+section[id="cursos-destaque"] .group {
+  background: transparent !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
 }
 
-.liquid-glass-card,
-.liquid-glass-card--accent,
-section:first-of-type [class*="backdrop-blur"],
-section:first-of-type [class*="bg-white/["],
-section [style*="rgba(255,255,255"] {
-  background:
-    linear-gradient(145deg, rgba(247, 242, 232, 0.1), rgba(247, 242, 232, 0.035)) !important;
-  border: 1px solid var(--ap-line) !important;
-  box-shadow:
-    inset 0 1px rgba(255, 255, 255, 0.1),
-    0 28px 80px rgba(0, 0, 0, 0.42) !important;
+section[id="cursos-destaque"] .group > div:first-child {
+  border-radius: 16px 16px 0 0 !important;
 }
 
-section:first-of-type [class*="grid-cols-2"] > div {
-  min-height: 136px;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-}
-
-section:first-of-type [class*="grid-cols-2"] > div:hover {
-  transform: translateY(-3px);
-  border-color: rgba(220, 255, 100, 0.45) !important;
-  background: linear-gradient(145deg, rgba(40, 231, 215, 0.14), rgba(255, 107, 53, 0.08)) !important;
-}
-
-button,
-a[href],
-[role="button"] {
+button, a[href], [role="button"] {
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
-button:hover,
-a[href]:hover,
-[role="button"]:hover {
+button:hover, a[href]:hover, [role="button"]:hover {
   transform: translateY(-1px);
 }
 
-button:focus-visible,
-a[href]:focus-visible,
-[role="button"]:focus-visible {
+button:focus-visible, a[href]:focus-visible, [role="button"]:focus-visible {
   outline: 2px solid var(--ap-lime);
   outline-offset: 3px;
 }
@@ -196,86 +156,110 @@ a[class*="rounded-full"],
 }
 
 button[class*="h-14"],
-a[class*="h-14"],
-button[class*="bg-[#1B00FF]"],
-a[class*="bg-[#1B00FF]"] {
+a[class*="h-14"] {
   color: #090806 !important;
   background: linear-gradient(135deg, var(--ap-lime), var(--ap-cyan) 62%, #f7f2e8) !important;
   border: 1px solid rgba(247, 242, 232, 0.52) !important;
   box-shadow: 0 16px 44px rgba(40, 231, 215, 0.26), 0 4px 0 rgba(0, 0, 0, 0.28) !important;
 }
 
-img,
-video {
+img, video {
   filter: saturate(1.08) contrast(1.05);
 }
 
-section img[class*="object-cover"],
-section video {
+section img[class*="object-cover"], section video {
   border-radius: 0 !important;
 }
 
-section:not(:first-of-type) {
-  background:
-    linear-gradient(180deg, rgba(8, 7, 6, 0.72), rgba(8, 7, 6, 0.92)),
-    linear-gradient(90deg, rgba(247, 242, 232, 0.028) 1px, transparent 1px);
-  background-size: auto, 56px 56px;
-}
-
-section:not(:first-of-type) > div {
-  position: relative;
-}
-
+/* Manter apenas text-transform no h2 do hero */
 section:not(:first-of-type) h2 {
   text-transform: uppercase;
   font-weight: 900 !important;
 }
 
-[class*="border-white"],
-[class*="ring-white"] {
+[class*="border-white"], [class*="ring-white"] {
   border-color: var(--ap-line) !important;
   --tw-ring-color: rgba(247, 242, 232, 0.18) !important;
 }
 
-section [class*="bg-white/5"],
-section [class*="bg-white/10"],
-section [class*="bg-black/"],
-section [class*="bg-[#0"],
-section [class*="bg-neutral"] {
-  background-color: var(--ap-panel) !important;
-}
-
-footer,
-[class*="section-dark"] {
+footer, [class*="section-dark"] {
   background: #050504 !important;
 }
 
+/* Cards internos — manter glass sÃ³ nos filhos imediatos do hero */
+section:first-of-type > div > div > div {
+  background: transparent !important;
+}
+
+section:first-of-type [class*="liquid-glass"] {
+  background: linear-gradient(145deg, rgba(247, 242, 232, 0.1), rgba(247, 242, 232, 0.035)) !important;
+  border: 1px solid var(--ap-line) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.1),
+    0 28px 80px rgba(0, 0, 0, 0.42) !important;
+}
+
+section[id="o-que-tem-dentro"] [class*="liquid-glass"],
+section[id="o-que-tem-dentro-mobile"] [class*="liquid-glass"] {
+  background: linear-gradient(145deg, rgba(247, 242, 232, 0.1), rgba(247, 242, 232, 0.035)) !important;
+  border: 1px solid var(--ap-line) !important;
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.1),
+    0 28px 80px rgba(0, 0, 0, 0.42) !important;
+}
+
+section[id="o-que-tem-dentro"],
+section[id="o-que-tem-dentro-mobile"] {
+  background: transparent !important;
+}
+
+/* Expandir grid cards no mobile para caber texto */
 @media (max-width: 767px) {
   body:before {
     opacity: 0.2;
     background-position: center 20%;
   }
-
   section:first-of-type:before {
     content: none;
   }
-
   section:first-of-type h1 {
     font-size: inherit;
   }
-
   section:first-of-type [class*="grid-cols-2"] > div {
     min-height: 118px;
+  }
+  section[id="cursos-destaque"] .grid > div {
+    border-radius: 16px !important;
+    overflow: hidden !important;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *:before,
-  *:after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
+*, *::before, *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  scroll-behavior: auto !important;
+  transition-duration: 0.01ms !important;
+}
+}
+
+/* garantir text legível nos cards escuros */
+section[id="cursos-destaque"] h3,
+section[id="cursos-destaque"] h4,
+section[id="cursos-destaque"] p {
+  color: #fff !important;
+}
+
+section[id="o-que-tem-dentro"] h3,
+section[id="o-que-tem-dentro"] p,
+section[id="o-que-tem-dentro-mobile"] h3,
+section[id="o-que-tem-dentro-mobile"] p {
+  color: var(--ap-ink) !important;
+}
+
+/* Remover limitações de altura que causam overflow */
+section[id="cursos-destaque"] [class*="h-[280px]"],
+section[id="cursos-destaque"] [class*="h-[340px]"] {
+  height: auto !important;
+  min-height: 320px !important;
 }
